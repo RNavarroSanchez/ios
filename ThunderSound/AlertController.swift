@@ -11,7 +11,9 @@ class AlertController: UIViewController
 {
     @IBOutlet var imgUser: UIImageView!
     @IBOutlet var alertView: UIView!
-    @IBOutlet var containerView: UIView!
+    @IBOutlet var publicarBT: UIButton!
+    @IBOutlet var comentarioTF: UITextField!
+    
     
     override func viewDidLoad()
     {
@@ -28,7 +30,11 @@ class AlertController: UIViewController
         self.alertView.clipsToBounds = true
         
         // Redondear View
-        self.containerView.layer.cornerRadius = 15
-        self.containerView.clipsToBounds = true
+        self.comentarioTF.layer.cornerRadius = 15
+        self.comentarioTF.clipsToBounds = true
+        
+        // Redondear BT
+        self.publicarBT.layer.cornerRadius = 8
+        self.publicarBT.clipsToBounds = true
     }
 }

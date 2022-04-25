@@ -24,5 +24,6 @@ class Register2Controller: UIViewController
         // Redondear TextField
         self.descripcionTF.layer.cornerRadius = 10
         self.descripcionTF.clipsToBounds = true
+        
     }
 }

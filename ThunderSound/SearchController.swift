@@ -28,10 +28,13 @@ class SearchController: UIViewController
     {
         super.viewDidLoad()
 
-        // Redondear TextField
-        self.searchBT.layer.cornerRadius = 5
-        self.searchBT.layer.borderWidth = 1
-        self.searchBT.clipsToBounds = true
+        // Redondear searchBT
+        let path = UIBezierPath(roundedRect:searchBT.bounds,
+                                byRoundingCorners:[.topRight, .bottomRight],
+                                cornerRadii: CGSize(width: 6, height:  6))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        searchBT.layer.mask = maskLayer
     }
 
 }
