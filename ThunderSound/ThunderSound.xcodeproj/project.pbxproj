@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A93C5D2D281711830006E18C /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C5D2C281711830006E18C /* InicioController.swift */; };
+		A940140227DA50BA0087C6E6 /* PTSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A94013FE27DA50BA0087C6E6 /* PTSans-Bold.ttf */; };
+		A940140327DA50BA0087C6E6 /* PTSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A94013FF27DA50BA0087C6E6 /* PTSans-Regular.ttf */; };
+		A940140427DA50BA0087C6E6 /* PTSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A940140027DA50BA0087C6E6 /* PTSans-BoldItalic.ttf */; };
+		A940140527DA50BA0087C6E6 /* PTSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A940140127DA50BA0087C6E6 /* PTSans-Italic.ttf */; };
+		A94195EA27EB92330006E2CD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195E927EB92330006E2CD /* LoginController.swift */; };
+		A94195EC27EB923D0006E2CD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195EB27EB923D0006E2CD /* RegisterController.swift */; };
+		A94195EE27EB928C0006E2CD /* Register2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195ED27EB928C0006E2CD /* Register2Controller.swift */; };
+		A94195F027EB97C60006E2CD /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195EF27EB97C60006E2CD /* SearchController.swift */; };
+		A94195F227EB9FF50006E2CD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195F127EB9FF50006E2CD /* TabBar.swift */; };
+		A9557ECE27FB4BCC000D061C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9557ECD27FB4BCC000D061C /* Main.storyboard */; };
+		A9557ED427FB521C000D061C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557ED327FB521B000D061C /* AlertController.swift */; };
+		A96C236127E252BB00CE771A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C236027E252BB00CE771A /* Launch Screen.storyboard */; };
+		A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434827D65770005A9141 /* AppDelegate.swift */; };
+		A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434A27D65770005A9141 /* SceneDelegate.swift */; };
+		A9B4435227D65771005A9141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B4435127D65771005A9141 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A93C5D2C281711830006E18C /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		A94013FE27DA50BA0087C6E6 /* PTSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Bold.ttf"; sourceTree = "<group>"; };
+		A94013FF27DA50BA0087C6E6 /* PTSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Regular.ttf"; sourceTree = "<group>"; };
+		A940140027DA50BA0087C6E6 /* PTSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A940140127DA50BA0087C6E6 /* PTSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Italic.ttf"; sourceTree = "<group>"; };
+		A94195E927EB92330006E2CD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A94195EB27EB923D0006E2CD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		A94195ED27EB928C0006E2CD /* Register2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2Controller.swift; sourceTree = "<group>"; };
+		A94195EF27EB97C60006E2CD /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		A94195F127EB9FF50006E2CD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		A9557ECD27FB4BCC000D061C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ThunderSound/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		A9557ED327FB521B000D061C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		A96C236027E252BB00CE771A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A9B4434527D65770005A9141 /* ThunderSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B4434827D65770005A9141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A9B4434A27D65770005A9141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A9B4435127D65771005A9141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9B4435627D65771005A9141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9B4434227D65770005A9141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A940140627DA50EA0087C6E6 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A94013FE27DA50BA0087C6E6 /* PTSans-Bold.ttf */,
+				A940140027DA50BA0087C6E6 /* PTSans-BoldItalic.ttf */,
+				A940140127DA50BA0087C6E6 /* PTSans-Italic.ttf */,
+				A94013FF27DA50BA0087C6E6 /* PTSans-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		A9B4433C27D65770005A9141 = {
+			isa = PBXGroup;
+			children = (
+				A9B4434727D65770005A9141 /* ThunderSound */,
+				A9B4434627D65770005A9141 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9B4434627D65770005A9141 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9B4434527D65770005A9141 /* ThunderSound.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9B4434727D65770005A9141 /* ThunderSound */ = {
+			isa = PBXGroup;
+			children = (
+				A9B4434827D65770005A9141 /* AppDelegate.swift */,
+				A94195E927EB92330006E2CD /* LoginController.swift */,
+				A94195EB27EB923D0006E2CD /* RegisterController.swift */,
+				A9B4434A27D65770005A9141 /* SceneDelegate.swift */,
+				A94195ED27EB928C0006E2CD /* Register2Controller.swift */,
+				A93C5D2C281711830006E18C /* InicioController.swift */,
+				A94195EF27EB97C60006E2CD /* SearchController.swift */,
+				A94195F127EB9FF50006E2CD /* TabBar.swift */,
+				A9557ED327FB521B000D061C /* AlertController.swift */,
+				A9557ECD27FB4BCC000D061C /* Main.storyboard */,
+				A9B4435127D65771005A9141 /* Assets.xcassets */,
+				A9B4435627D65771005A9141 /* Info.plist */,
+				A96C236027E252BB00CE771A /* Launch Screen.storyboard */,
+				A940140627DA50EA0087C6E6 /* fonts */,
+			);
+			path = ThunderSound;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9B4434427D65770005A9141 /* ThunderSound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9B4435927D65771005A9141 /* Build configuration list for PBXNativeTarget "ThunderSound" */;
+			buildPhases = (
+				A9B4434127D65770005A9141 /* Sources */,
+				A9B4434227D65770005A9141 /* Frameworks */,
+				A9B4434327D65770005A9141 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThunderSound;
+			productName = ThunderSound;
+			productReference = A9B4434527D65770005A9141 /* ThunderSound.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9B4433D27D65770005A9141 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					A9B4434427D65770005A9141 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = A9B4434027D65770005A9141 /* Build configuration list for PBXProject "ThunderSound" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9B4433C27D65770005A9141;
+			productRefGroup = A9B4434627D65770005A9141 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9B4434427D65770005A9141 /* ThunderSound */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9B4434327D65770005A9141 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9557ECE27FB4BCC000D061C /* Main.storyboard in Resources */,
+				A940140527DA50BA0087C6E6 /* PTSans-Italic.ttf in Resources */,
+				A940140327DA50BA0087C6E6 /* PTSans-Regular.ttf in Resources */,
+				A940140427DA50BA0087C6E6 /* PTSans-BoldItalic.ttf in Resources */,
+				A9B4435227D65771005A9141 /* Assets.xcassets in Resources */,
+				A940140227DA50BA0087C6E6 /* PTSans-Bold.ttf in Resources */,
+				A96C236127E252BB00CE771A /* Launch Screen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9B4434127D65770005A9141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A94195EC27EB923D0006E2CD /* RegisterController.swift in Sources */,
+				A94195F027EB97C60006E2CD /* SearchController.swift in Sources */,
+				A94195EE27EB928C0006E2CD /* Register2Controller.swift in Sources */,
+				A93C5D2D281711830006E18C /* InicioController.swift in Sources */,
+				A94195EA27EB92330006E2CD /* LoginController.swift in Sources */,
+				A9557ED427FB521C000D061C /* AlertController.swift in Sources */,
+				A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */,
+				A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */,
+				A94195F227EB9FF50006E2CD /* TabBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9B4435727D65771005A9141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A9B4435827D65771005A9141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9B4435A27D65771005A9141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconThunder;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DTLRHN6WR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThunderSound/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esTech.ThunderSound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9B4435B27D65771005A9141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconThunder;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DTLRHN6WR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThunderSound/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esTech.ThunderSound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9B4434027D65770005A9141 /* Build configuration list for PBXProject "ThunderSound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B4435727D65771005A9141 /* Debug */,
+				A9B4435827D65771005A9141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9B4435927D65771005A9141 /* Build configuration list for PBXNativeTarget "ThunderSound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B4435A27D65771005A9141 /* Debug */,
+				A9B4435B27D65771005A9141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9B4433D27D65770005A9141 /* Project object */;
+}
