@@ -2,7 +2,7 @@
 //  SearchController.swift
 //  ThunderSound
 //
-//  Created by A1-IMAC08 on 23/3/22.
+//  Created by Juanjo
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  AlertController.swift
 //  ThunderSound
 //
-//  Created by A1-IMAC08 on 4/4/22.
+//  Created by Juanjo
 //
 
 import UIKit

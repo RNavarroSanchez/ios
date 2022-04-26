@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A93C5D2D281711830006E18C /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C5D2C281711830006E18C /* InicioController.swift */; };
+		A93E2B0E281856CE00A20CA4 /* NotificacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93E2B0D281856CE00A20CA4 /* NotificacionesController.swift */; };
+		A93E2B10281856DB00A20CA4 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93E2B0F281856DB00A20CA4 /* PerfilController.swift */; };
+		A93E2B12281856EA00A20CA4 /* SeguirController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93E2B11281856EA00A20CA4 /* SeguirController.swift */; };
 		A940140227DA50BA0087C6E6 /* PTSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A94013FE27DA50BA0087C6E6 /* PTSans-Bold.ttf */; };
 		A940140327DA50BA0087C6E6 /* PTSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A94013FF27DA50BA0087C6E6 /* PTSans-Regular.ttf */; };
 		A940140427DA50BA0087C6E6 /* PTSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A940140027DA50BA0087C6E6 /* PTSans-BoldItalic.ttf */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		A93C5D2C281711830006E18C /* InicioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		A93E2B0D281856CE00A20CA4 /* NotificacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacionesController.swift; sourceTree = "<group>"; };
+		A93E2B0F281856DB00A20CA4 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
+		A93E2B11281856EA00A20CA4 /* SeguirController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguirController.swift; sourceTree = "<group>"; };
 		A94013FE27DA50BA0087C6E6 /* PTSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Bold.ttf"; sourceTree = "<group>"; };
 		A94013FF27DA50BA0087C6E6 /* PTSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Regular.ttf"; sourceTree = "<group>"; };
 		A940140027DA50BA0087C6E6 /* PTSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				A9B4434827D65770005A9141 /* AppDelegate.swift */,
+				A93E2B0D281856CE00A20CA4 /* NotificacionesController.swift */,
+				A93E2B0F281856DB00A20CA4 /* PerfilController.swift */,
+				A93E2B11281856EA00A20CA4 /* SeguirController.swift */,
 				A94195E927EB92330006E2CD /* LoginController.swift */,
 				A94195EB27EB923D0006E2CD /* RegisterController.swift */,
 				A9B4434A27D65770005A9141 /* SceneDelegate.swift */,
@@ -185,7 +194,10 @@
 				A94195EE27EB928C0006E2CD /* Register2Controller.swift in Sources */,
 				A93C5D2D281711830006E18C /* InicioController.swift in Sources */,
 				A94195EA27EB92330006E2CD /* LoginController.swift in Sources */,
+				A93E2B0E281856CE00A20CA4 /* NotificacionesController.swift in Sources */,
+				A93E2B10281856DB00A20CA4 /* PerfilController.swift in Sources */,
 				A9557ED427FB521C000D061C /* AlertController.swift in Sources */,
+				A93E2B12281856EA00A20CA4 /* SeguirController.swift in Sources */,
 				A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */,
 				A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */,
 				A94195F227EB9FF50006E2CD /* TabBar.swift in Sources */,
