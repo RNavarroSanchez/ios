@@ -24,6 +24,8 @@
 		A9557ECE27FB4BCC000D061C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9557ECD27FB4BCC000D061C /* Main.storyboard */; };
 		A9557ED427FB521C000D061C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557ED327FB521B000D061C /* AlertController.swift */; };
 		A96C236127E252BB00CE771A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C236027E252BB00CE771A /* Launch Screen.storyboard */; };
+		A9A0711D2819A04500F67230 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0711C2819A04500F67230 /* CollectionViewCell.swift */; };
+		A9A0711F2819A24E00F67230 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0711E2819A24E00F67230 /* TableViewCell.swift */; };
 		A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434827D65770005A9141 /* AppDelegate.swift */; };
 		A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434A27D65770005A9141 /* SceneDelegate.swift */; };
 		A9B4435227D65771005A9141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B4435127D65771005A9141 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		A9557ECD27FB4BCC000D061C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ThunderSound/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		A9557ED327FB521B000D061C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A96C236027E252BB00CE771A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A9A0711C2819A04500F67230 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A9A0711E2819A24E00F67230 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A9B4434527D65770005A9141 /* ThunderSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B4434827D65770005A9141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9B4434A27D65770005A9141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				A93E2B0F281856DB00A20CA4 /* PerfilController.swift */,
 				A93E2B11281856EA00A20CA4 /* SeguirController.swift */,
 				A94195E927EB92330006E2CD /* LoginController.swift */,
+				A9A0711C2819A04500F67230 /* CollectionViewCell.swift */,
+				A9A0711E2819A24E00F67230 /* TableViewCell.swift */,
 				A94195EB27EB923D0006E2CD /* RegisterController.swift */,
 				A9B4434A27D65770005A9141 /* SceneDelegate.swift */,
 				A94195ED27EB928C0006E2CD /* Register2Controller.swift */,
@@ -192,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A0711F2819A24E00F67230 /* TableViewCell.swift in Sources */,
 				A94195EC27EB923D0006E2CD /* RegisterController.swift in Sources */,
 				A93E2B1628185BF600A20CA4 /* TabBarController.swift in Sources */,
 				A94195F027EB97C60006E2CD /* SearchController.swift in Sources */,
@@ -202,6 +209,7 @@
 				A93E2B10281856DB00A20CA4 /* PerfilController.swift in Sources */,
 				A9557ED427FB521C000D061C /* AlertController.swift in Sources */,
 				A93E2B12281856EA00A20CA4 /* SeguirController.swift in Sources */,
+				A9A0711D2819A04500F67230 /* CollectionViewCell.swift in Sources */,
 				A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */,
 				A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */,
 				A94195F227EB9FF50006E2CD /* TabBar.swift in Sources */,
