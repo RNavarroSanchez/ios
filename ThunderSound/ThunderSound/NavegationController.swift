@@ -9,11 +9,11 @@ import UIKit
 
 class NavegationController: UIViewController
 {
-    @IBOutlet var homeIV: UIImageView!
-    @IBOutlet var searchIV: UIImageView!
-    @IBOutlet var addIV: UIImageView!
-    @IBOutlet var notificationIV: UIImageView!
-    @IBOutlet var profileIV: UIImageView!
+    @IBOutlet var homeIV: UIButton!
+    @IBOutlet var searchIV: UIButton!
+    @IBOutlet var addIV: UIButton!
+    @IBOutlet var notificationIV: UIButton!
+    @IBOutlet var profileIV: UIButton!
     
     override func viewDidLoad()
     {
