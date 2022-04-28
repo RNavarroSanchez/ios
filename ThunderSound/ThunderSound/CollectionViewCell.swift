@@ -2,7 +2,7 @@
 //  CollectionViewCell.swift
 //  ThunderSound
 //
-//  Created by A1-IMAC08 on 27/4/22.
+//  Created by Juanjo
 //
 
 import UIKit
@@ -14,4 +14,3 @@ class CollectionViewCell: UICollectionViewCell
     @IBOutlet var comentariosView: UIView!
     @IBOutlet var miComentarioIMG: UIImageView!
 }
-
