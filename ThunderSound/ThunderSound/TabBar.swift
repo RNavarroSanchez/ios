@@ -40,7 +40,6 @@ class TabBar: UITabBar
         let radius: CGFloat = 37.0
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
-
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: CGPoint(x: (centerWidth - radius * 2), y: 0))
         path.addArc(withCenter: CGPoint(x: centerWidth, y: 0), radius: radius, startAngle: CGFloat(180).degreesToRadians, endAngle: CGFloat(0).degreesToRadians, clockwise: false)
