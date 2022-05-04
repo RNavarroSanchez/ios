@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XEx-9N-ExH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XEx-9N-ExH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -20,7 +20,7 @@
         <!--login-->
         <scene sceneID="pxS-nJ-SqH">
             <objects>
-                <viewController title="login" interfaceStyle="light" id="XEx-9N-ExH" customClass="LoginController" sceneMemberID="viewController">
+                <viewController title="login" interfaceStyle="light" id="XEx-9N-ExH" customClass="LoginController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2AC-xA-Tva">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,8 +129,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="rememberLB" destination="Jaz-Wu-eHO" id="NhG-Ap-azJ"/>
-                        <outlet property="userTF" destination="5vp-bD-WXU" id="crc-lv-aji"/>
+                        <outlet property="passwordTF" destination="ave-iL-S3G" id="0Sl-Vj-N1c"/>
+                        <outlet property="rememberLB" destination="Jaz-Wu-eHO" id="cJy-9z-cjA"/>
+                        <outlet property="userTF" destination="5vp-bD-WXU" id="bSD-bg-CJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwu-gO-wMn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -259,7 +260,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHf-8e-hUF">
-                                <rect key="frame" x="80" y="415" width="215" height="25"/>
+                                <rect key="frame" x="80" y="415.33333333333331" width="215" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="mcC-Fu-nuC"/>
                                 </constraints>
@@ -274,13 +275,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-Jc-8VC">
-                                <rect key="frame" x="80" y="390.66666666666669" width="215" height="19.333333333333314"/>
+                                <rect key="frame" x="80" y="390.66666666666669" width="215" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nN-kQ-3RJ">
-                                <rect key="frame" x="80" y="484.66666666666669" width="215" height="25"/>
+                                <rect key="frame" x="80" y="485" width="215" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="XSD-IV-Ifr"/>
                                 </constraints>
@@ -288,13 +289,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repetir Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEW-zk-Cod">
-                                <rect key="frame" x="80" y="460" width="215" height="19.666666666666686"/>
+                                <rect key="frame" x="80" y="460.33333333333331" width="215" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tks-x5-6ZL">
-                                <rect key="frame" x="80" y="618.66666666666663" width="215" height="50"/>
+                                <rect key="frame" x="80" y="619" width="215" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sJN-DY-tnC"/>
                                 </constraints>
@@ -525,7 +526,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encontrar amigos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqo-xe-gVv">
-                                <rect key="frame" x="78" y="61" width="149" height="26"/>
+                                <rect key="frame" x="77.999999999999986" y="61" width="148.66666666666663" height="26"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1129,13 +1130,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publicaciones" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIr-WJ-62R">
-                                <rect key="frame" x="278" y="209.66666666666666" width="82" height="18.666666666666657"/>
+                                <rect key="frame" x="278.33333333333331" y="210" width="81.666666666666686" height="18.333333333333343"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Seguidos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkV-b5-bN9">
-                                <rect key="frame" x="212" y="208.66666666666666" width="60" height="18.666666666666657"/>
+                                <rect key="frame" x="212" y="209" width="60" height="18.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="6nG-Ql-2rB"/>
                                 </constraints>
@@ -1144,7 +1145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv7-ad-n9c">
-                                <rect key="frame" x="226" y="178.66666666666666" width="69" height="22"/>
+                                <rect key="frame" x="226" y="179" width="69" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="Paz-jb-BeM"/>
                                 </constraints>
@@ -1244,13 +1245,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="420 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-cw-hNQ">
-                                <rect key="frame" x="300" y="179.66666666666666" width="33.666666666666686" height="22"/>
+                                <rect key="frame" x="300" y="180" width="33.666666666666686" height="22"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="@nombre de usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1e-uW-vSt">
-                                <rect key="frame" x="114" y="125" width="127" height="19"/>
+                                <rect key="frame" x="114" y="125" width="126.66666666666669" height="19"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1489,7 +1490,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcm-9d-P3v">
-                                        <rect key="frame" x="60" y="7" width="209" height="25"/>
+                                        <rect key="frame" x="60" y="7.0000000000000018" width="209" height="24.666666666666671"/>
                                         <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1507,7 +1508,7 @@
                                                 <rect key="frame" x="0.0" y="75" width="289" height="107"/>
                                                 <subviews>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="My3-Xf-BXv">
-                                                        <rect key="frame" x="119" y="74.666666666666686" width="135" height="4.3333333333333286"/>
+                                                        <rect key="frame" x="119" y="74.333333333333314" width="135" height="4.3333333333333286"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="135" id="obf-FX-aju"/>
                                                         </constraints>
@@ -1529,7 +1530,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRJ-7R-4pl">
-                                                        <rect key="frame" x="119" y="45" width="145" height="14.666666666666664"/>
+                                                        <rect key="frame" x="119" y="45" width="145" height="14.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="145" id="CCV-XP-fdu"/>
                                                         </constraints>
@@ -1544,7 +1545,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfv-Up-ge1">
-                                                        <rect key="frame" x="257" y="61.333333333333314" width="25" height="31"/>
+                                                        <rect key="frame" x="257" y="61" width="25" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="31" id="bdZ-t3-NSq"/>
                                                             <constraint firstAttribute="width" constant="25" id="pIA-mp-PdB"/>
