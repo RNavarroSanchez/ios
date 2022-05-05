@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XEx-9N-ExH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzW-z1-TGP">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -690,7 +690,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="8c0-kb-6Pz" customClass="CollectionViewCell" customModule="ThunderSound" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="8c0-kb-6Pz" customClass="InicioCollectionViewCell" customModule="ThunderSound" customModuleProvider="target">
                                         <rect key="frame" x="-19.666666666666668" y="0.0" width="374" height="496"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="L8l-Fd-DzW">
@@ -727,14 +727,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnt-2X-kWJ">
-                                                    <rect key="frame" x="16" y="111" width="342" height="91"/>
+                                                    <rect key="frame" x="16" y="111" width="342" height="99"/>
                                                     <subviews>
-                                                        <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TAh-6u-YNo">
-                                                            <rect key="frame" x="35" y="16" width="290" height="83"/>
+                                                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAh-6u-YNo">
+                                                            <rect key="frame" x="3" y="0.0" width="334" height="99"/>
                                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="115" id="MF9-4X-3Qz"/>
-                                                                <constraint firstAttribute="width" constant="290" id="iuI-u0-5jw"/>
+                                                                <constraint firstAttribute="height" constant="99" id="uiy-eC-vPn"/>
                                                             </constraints>
                                                             <wkWebViewConfiguration key="configuration">
                                                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -743,14 +742,15 @@
                                                         </wkWebView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="TAh-6u-YNo" secondAttribute="trailing" constant="5" id="9rF-L3-8im"/>
+                                                        <constraint firstItem="TAh-6u-YNo" firstAttribute="top" secondItem="dnt-2X-kWJ" secondAttribute="top" id="Gc6-nZ-V0i"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TAh-6u-YNo" secondAttribute="bottom" id="nGR-PF-P7i"/>
+                                                        <constraint firstItem="TAh-6u-YNo" firstAttribute="leading" secondItem="dnt-2X-kWJ" secondAttribute="leading" constant="3" id="wJL-jd-A1h"/>
+                                                    </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N30-2p-9uH">
-                                                    <rect key="frame" x="296" y="226" width="62" height="15"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="21"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0P-gR-Yq9">
-                                                    <rect key="frame" x="226" y="210" width="62" height="31"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0P-gR-Yq9">
+                                                    <rect key="frame" x="226" y="218" width="62" height="31"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="21"/>
                                                 </button>
@@ -761,7 +761,7 @@
                                                             <rect key="frame" x="26" y="8" width="317" height="165"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="92" id="enO-sS-QTY" customClass="TableViewCell" customModule="ThunderSound" customModuleProvider="target">
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="92" id="enO-sS-QTY" customClass="InicioTableViewCell" customModule="ThunderSound" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="44.666666030883789" width="317" height="92"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="enO-sS-QTY" id="b40-ja-bNL">
@@ -858,38 +858,45 @@
                                                         <constraint firstItem="eDr-vC-ZoG" firstAttribute="leading" secondItem="AQw-UZ-Epi" secondAttribute="leading" constant="38" id="wrK-hy-6cX"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N30-2p-9uH">
+                                                    <rect key="frame" x="289" y="218" width="62" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="21"/>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="ez1-YS-F3Q" firstAttribute="top" secondItem="IUk-VC-c8j" secondAttribute="bottom" constant="7" id="0Sn-Ze-mbp"/>
+                                                <constraint firstAttribute="trailing" secondItem="N30-2p-9uH" secondAttribute="trailing" constant="23.000000000000057" id="3u4-cA-V0z"/>
                                                 <constraint firstItem="ez1-YS-F3Q" firstAttribute="leading" secondItem="L8l-Fd-DzW" secondAttribute="leading" constant="62" id="4Kl-To-eax"/>
                                                 <constraint firstItem="dnt-2X-kWJ" firstAttribute="centerX" secondItem="L8l-Fd-DzW" secondAttribute="centerX" id="87F-Qz-09h"/>
                                                 <constraint firstAttribute="bottom" secondItem="AQw-UZ-Epi" secondAttribute="bottom" id="AAN-ey-ub7"/>
-                                                <constraint firstItem="N30-2p-9uH" firstAttribute="leading" secondItem="D0P-gR-Yq9" secondAttribute="trailing" constant="8" symbolic="YES" id="Ac9-wc-qEW"/>
+                                                <constraint firstItem="D0P-gR-Yq9" firstAttribute="top" secondItem="dnt-2X-kWJ" secondAttribute="bottom" constant="8" symbolic="YES" id="DVr-EZ-2OH"/>
                                                 <constraint firstItem="dnt-2X-kWJ" firstAttribute="top" secondItem="ez1-YS-F3Q" secondAttribute="bottom" constant="15" id="DbG-48-Hsv"/>
                                                 <constraint firstItem="IUk-VC-c8j" firstAttribute="top" secondItem="L8l-Fd-DzW" secondAttribute="top" constant="24" id="Dr5-yO-gdg"/>
                                                 <constraint firstItem="IUk-VC-c8j" firstAttribute="leading" secondItem="0jw-If-1Zu" secondAttribute="trailing" constant="9" id="Gvw-HT-j98"/>
                                                 <constraint firstAttribute="trailing" secondItem="gwr-5e-uTE" secondAttribute="trailing" constant="21" id="HJe-ld-hpd"/>
                                                 <constraint firstItem="gwr-5e-uTE" firstAttribute="top" secondItem="L8l-Fd-DzW" secondAttribute="top" constant="24" id="LKS-ES-BC7"/>
-                                                <constraint firstItem="D0P-gR-Yq9" firstAttribute="baseline" secondItem="N30-2p-9uH" secondAttribute="firstBaseline" id="Nfp-Li-puL"/>
+                                                <constraint firstItem="N30-2p-9uH" firstAttribute="top" secondItem="dnt-2X-kWJ" secondAttribute="bottom" constant="8" symbolic="YES" id="NhC-rV-rOY"/>
                                                 <constraint firstItem="AQw-UZ-Epi" firstAttribute="leading" secondItem="L8l-Fd-DzW" secondAttribute="leading" id="RJb-bn-JNs"/>
                                                 <constraint firstAttribute="trailing" secondItem="ez1-YS-F3Q" secondAttribute="trailing" constant="45" id="W96-gl-yZ0"/>
+                                                <constraint firstAttribute="trailing" secondItem="dnt-2X-kWJ" secondAttribute="trailing" constant="16" id="W9r-RR-Gsf"/>
                                                 <constraint firstItem="0jw-If-1Zu" firstAttribute="leading" secondItem="L8l-Fd-DzW" secondAttribute="leading" constant="20" id="YIj-wb-gvV"/>
-                                                <constraint firstItem="AQw-UZ-Epi" firstAttribute="top" secondItem="N30-2p-9uH" secondAttribute="bottom" constant="14" id="bPg-Ej-xNe"/>
                                                 <constraint firstItem="AQw-UZ-Epi" firstAttribute="top" secondItem="L8l-Fd-DzW" secondAttribute="top" constant="255" id="cu2-FS-BBD"/>
-                                                <constraint firstItem="D0P-gR-Yq9" firstAttribute="baseline" secondItem="N30-2p-9uH" secondAttribute="baseline" id="de9-RB-0IU"/>
-                                                <constraint firstItem="D0P-gR-Yq9" firstAttribute="top" secondItem="dnt-2X-kWJ" secondAttribute="bottom" constant="8" symbolic="YES" id="hzb-kf-Rg4"/>
+                                                <constraint firstItem="AQw-UZ-Epi" firstAttribute="top" secondItem="N30-2p-9uH" secondAttribute="bottom" constant="6" id="krY-JZ-0ZG"/>
                                                 <constraint firstAttribute="trailing" secondItem="AQw-UZ-Epi" secondAttribute="trailing" id="sGf-BK-8wG"/>
                                                 <constraint firstItem="0jw-If-1Zu" firstAttribute="top" secondItem="L8l-Fd-DzW" secondAttribute="top" constant="16" id="t45-ok-HCL"/>
                                                 <constraint firstItem="dnt-2X-kWJ" firstAttribute="leading" secondItem="L8l-Fd-DzW" secondAttribute="leading" constant="16" id="tXo-tF-GEx"/>
+                                                <constraint firstItem="N30-2p-9uH" firstAttribute="leading" secondItem="D0P-gR-Yq9" secondAttribute="trailing" constant="1" id="vTz-PY-3Hz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="374" height="496"/>
                                         <connections>
+                                            <outlet property="InicioWebView" destination="TAh-6u-YNo" id="fUB-bA-oeX"/>
                                             <outlet property="comentariosTotalesBT" destination="D0P-gR-Yq9" id="TNt-0D-210"/>
                                             <outlet property="comentariosView" destination="AQw-UZ-Epi" id="lC4-EB-DQd"/>
                                             <outlet property="dateLB" destination="gwr-5e-uTE" id="zNA-xG-hTm"/>
-                                            <outlet property="enviarMiComentarioBT" destination="0uJ-rN-r4g" id="wgm-iy-8bc"/>
+                                            <outlet property="enviarMiComentarioBT" destination="0uJ-rN-r4g" id="X7D-gx-K5F"/>
                                             <outlet property="likeTotalesBT" destination="N30-2p-9uH" id="fxn-Ai-fjr"/>
                                             <outlet property="miComentarioIV" destination="eDr-vC-ZoG" id="Myj-UV-0mX"/>
                                             <outlet property="miComentarioNewTF" destination="wGw-GX-8dF" id="vst-eZ-7CS"/>
@@ -1505,9 +1512,12 @@
                     </view>
                     <connections>
                         <outlet property="alertView" destination="Vr6-jG-QDC" id="ipR-oc-vZ2"/>
+                        <outlet property="cerrarNewPostBT" destination="blj-MV-N5W" id="P2S-n8-LMs"/>
                         <outlet property="comentarioTF" destination="IjX-to-EL3" id="GfZ-TD-aWp"/>
                         <outlet property="imgUser" destination="UUY-ae-VX4" id="N2d-5E-WEw"/>
+                        <outlet property="nameUserLB" destination="gcm-9d-P3v" id="YV4-gA-MUy"/>
                         <outlet property="publicarBT" destination="cgA-5h-V2s" id="uj4-A2-ggv"/>
+                        <outlet property="spotifyWebView" destination="Ll9-nN-g7J" id="txY-Va-t4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hx-9V-ZPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1745,11 +1755,11 @@
             <objects>
                 <viewController id="RYd-Hx-tGu" customClass="NavegationController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO0-xd-Bri">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN7-PZ-nCH">
-                                <rect key="frame" x="0.0" y="17" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="15" width="375" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o17-y7-ckV">
                                         <rect key="frame" x="8" y="8" width="40" height="38"/>
@@ -1827,7 +1837,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Gvs-NX-paK"/>
+        <segue reference="y4H-WV-uOp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BuscarBTwhite" width="46.333332061767578" height="41"/>

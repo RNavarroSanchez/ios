@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import WebKit
+
 
 class AlertController: UIViewController
 {
     @IBOutlet var imgUser: UIImageView!
+    @IBOutlet var cerrarNewPostBT: UIButton!
+    @IBOutlet var nameUserLB: UILabel!
     @IBOutlet var alertView: UIView!
     @IBOutlet var publicarBT: UIButton!
     @IBOutlet var comentarioTF: UITextField!
+    @IBOutlet var spotifyWebView: WKWebView!
     
     
     override func viewDidLoad()

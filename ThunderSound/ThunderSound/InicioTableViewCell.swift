@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell
+class InicioTableViewCell: UITableViewCell
 {
     @IBOutlet var comentarioIV: UIImageView!
     @IBOutlet var userNameComentLB: UILabel!

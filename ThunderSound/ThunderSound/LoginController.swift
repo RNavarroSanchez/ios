@@ -27,11 +27,6 @@ class LoginController: UIViewController
     {
         super.viewDidLoad()
         
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedLabel(tapGestureRecognizer:)))
-//        rememberLB.isUserInteractionEnabled = true
-//        rememberLB.addGestureRecognizer(tapGesture)
-        
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
         rememberLB.isUserInteractionEnabled = true
         rememberLB.addGestureRecognizer(tap)
@@ -42,9 +37,4 @@ class LoginController: UIViewController
     {
         print("tap working")
     }
-    
-//    @objc func tappedLabel(tapGestureRecognizer: UITapGestureRecognizer)
-//    {
-//        print("tap working")
-//    }
 }
