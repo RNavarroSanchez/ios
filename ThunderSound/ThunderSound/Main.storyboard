@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzW-z1-TGP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XEx-9N-ExH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -141,7 +141,7 @@
         <!--recuperar contraseña-->
         <scene sceneID="9Fc-mp-LBz">
             <objects>
-                <viewController title="recuperar contraseña" id="61u-pv-RQs" customClass="RememberController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RememberPass" title="recuperar contraseña" id="61u-pv-RQs" customClass="RememberController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8n2-Mq-Dt2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1390,7 +1390,7 @@
         <scene sceneID="TAr-UM-3bL">
             <objects>
                 <viewController title="crear publicacion" id="lxW-f1-c6I" customClass="AlertController" customModule="ThunderSound" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="2XC-8O-79a">
+                    <view key="view" contentMode="scaleToFill" id="2XC-8O-79a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1505,7 +1505,6 @@
                         <viewLayoutGuide key="safeArea" id="1gX-VI-KMu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vr6-jG-QDC" firstAttribute="centerX" secondItem="2XC-8O-79a" secondAttribute="centerX" id="G9E-8Y-F2m"/>
                             <constraint firstItem="Vr6-jG-QDC" firstAttribute="leading" secondItem="1gX-VI-KMu" secondAttribute="leading" constant="25" id="liS-ix-ZCZ"/>
                             <constraint firstItem="Vr6-jG-QDC" firstAttribute="centerY" secondItem="2XC-8O-79a" secondAttribute="centerY" id="vtP-16-zRt"/>
                         </constraints>
@@ -1755,11 +1754,11 @@
             <objects>
                 <viewController id="RYd-Hx-tGu" customClass="NavegationController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO0-xd-Bri">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN7-PZ-nCH">
-                                <rect key="frame" x="0.0" y="15" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="17" width="375" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o17-y7-ckV">
                                         <rect key="frame" x="8" y="8" width="40" height="38"/>
@@ -1837,7 +1836,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y4H-WV-uOp"/>
+        <segue reference="Gvs-NX-paK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BuscarBTwhite" width="46.333332061767578" height="41"/>
