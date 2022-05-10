@@ -23,6 +23,9 @@
 		A94195F227EB9FF50006E2CD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195F127EB9FF50006E2CD /* TabBar.swift */; };
 		A94ABF0E281AE936000D3794 /* NavegationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94ABF0D281AE936000D3794 /* NavegationController.swift */; };
 		A94ABF10281B03D3000D3794 /* RememberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94ABF0F281B03D3000D3794 /* RememberController.swift */; };
+		A9557EC6282ACC250074999C /* SeguidoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557EC5282ACC250074999C /* SeguidoresController.swift */; };
+		A9557EC8282ACCD50074999C /* SeguidosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557EC7282ACCD50074999C /* SeguidosController.swift */; };
+		A9557ECA282ACF4B0074999C /* FollowsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557EC9282ACF4B0074999C /* FollowsController.swift */; };
 		A9557ECE27FB4BCC000D061C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9557ECD27FB4BCC000D061C /* Main.storyboard */; };
 		A9557ED427FB521C000D061C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557ED327FB521B000D061C /* AlertController.swift */; };
 		A96C236127E252BB00CE771A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C236027E252BB00CE771A /* Launch Screen.storyboard */; };
@@ -50,6 +53,9 @@
 		A94195F127EB9FF50006E2CD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		A94ABF0D281AE936000D3794 /* NavegationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavegationController.swift; sourceTree = "<group>"; };
 		A94ABF0F281B03D3000D3794 /* RememberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberController.swift; sourceTree = "<group>"; };
+		A9557EC5282ACC250074999C /* SeguidoresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguidoresController.swift; sourceTree = "<group>"; };
+		A9557EC7282ACCD50074999C /* SeguidosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguidosController.swift; sourceTree = "<group>"; };
+		A9557EC9282ACF4B0074999C /* FollowsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowsController.swift; sourceTree = "<group>"; };
 		A9557ECD27FB4BCC000D061C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ThunderSound/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		A9557ED327FB521B000D061C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A96C236027E252BB00CE771A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -105,10 +111,13 @@
 			children = (
 				A9B4434827D65770005A9141 /* AppDelegate.swift */,
 				A93E2B0D281856CE00A20CA4 /* NotificacionesController.swift */,
+				A9557EC9282ACF4B0074999C /* FollowsController.swift */,
+				A9557EC7282ACCD50074999C /* SeguidosController.swift */,
 				A93E2B0F281856DB00A20CA4 /* PerfilController.swift */,
 				A93E2B11281856EA00A20CA4 /* SeguirController.swift */,
 				A94ABF0F281B03D3000D3794 /* RememberController.swift */,
 				A94195E927EB92330006E2CD /* LoginController.swift */,
+				A9557EC5282ACC250074999C /* SeguidoresController.swift */,
 				A9A0711C2819A04500F67230 /* InicioCollectionViewCell.swift */,
 				A9A0711E2819A24E00F67230 /* InicioTableViewCell.swift */,
 				A94ABF0D281AE936000D3794 /* NavegationController.swift */,
@@ -211,13 +220,16 @@
 				A94195EE27EB928C0006E2CD /* Register2Controller.swift in Sources */,
 				A94ABF0E281AE936000D3794 /* NavegationController.swift in Sources */,
 				A93C5D2D281711830006E18C /* InicioController.swift in Sources */,
+				A9557EC6282ACC250074999C /* SeguidoresController.swift in Sources */,
 				A94ABF10281B03D3000D3794 /* RememberController.swift in Sources */,
 				A94195EA27EB92330006E2CD /* LoginController.swift in Sources */,
 				A93E2B0E281856CE00A20CA4 /* NotificacionesController.swift in Sources */,
 				A93E2B10281856DB00A20CA4 /* PerfilController.swift in Sources */,
 				A9557ED427FB521C000D061C /* AlertController.swift in Sources */,
 				A93E2B12281856EA00A20CA4 /* SeguirController.swift in Sources */,
+				A9557EC8282ACCD50074999C /* SeguidosController.swift in Sources */,
 				A9A0711D2819A04500F67230 /* InicioCollectionViewCell.swift in Sources */,
+				A9557ECA282ACF4B0074999C /* FollowsController.swift in Sources */,
 				A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */,
 				A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */,
 				A94195F227EB9FF50006E2CD /* TabBar.swift in Sources */,
