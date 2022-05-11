@@ -22,4 +22,11 @@ class InicioCollectionViewCell: UICollectionViewCell
     @IBOutlet var miComentarioNewTF: UITextField!
     @IBOutlet var enviarMiComentarioBT: UIButton!
     @IBOutlet var InicioWebView: WKWebView!
+    
+    
+    func girarimagen(_ sender: Any)
+    {
+        enviarMiComentarioBT.transform = enviarMiComentarioBT.transform.rotated(by: CGFloat(Double.pi / 6))
+    }
+
 }

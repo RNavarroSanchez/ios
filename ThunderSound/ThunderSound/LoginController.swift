@@ -27,7 +27,6 @@ class LoginController: UIViewController
     {
         super.viewDidLoad()
 
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
         rememberLB.isUserInteractionEnabled = true
         rememberLB.addGestureRecognizer(tap)
@@ -42,5 +41,6 @@ class LoginController: UIViewController
 //
 //           let nextViewController = storyBoard.instantiateViewController(withIdentifier: "secondStoryboardId") as! SecondViewController
 //           self.present(nextViewController, animated:true, completion:nil)
+        
     }
 }
