@@ -27,20 +27,18 @@ class LoginController: UIViewController
     {
         super.viewDidLoad()
 
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapRemember))
         rememberLB.isUserInteractionEnabled = true
         rememberLB.addGestureRecognizer(tap)
     }
 
     @objc
-    func tapFunction()
+    func tapRemember()
     {
-        print("tap working")
-        //he puesto storyboard id RememberPass
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//
-//           let nextViewController = storyBoard.instantiateViewController(withIdentifier: "secondStoryboardId") as! SecondViewController
-//           self.present(nextViewController, animated:true, completion:nil)
+        print("tapRemember working")
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RememberPassid") as! RememberController
+        self.present(vc, animated: true, completion: nil)
     }
 }
