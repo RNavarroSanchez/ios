@@ -14,6 +14,10 @@ class FollowsController: UIViewController
 //    {
 //      Asi es como me lo crea solo y abajo como he visgo que se declara pero no se si estara deprecated
 //    }
+    @IBAction func backBT(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func didTapSegment(segment: UISegmentedControl)
     {

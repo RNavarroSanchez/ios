@@ -17,13 +17,16 @@ class Register2Controller: UIViewController
     
     @IBAction func registerBTr2(_ sender: Any)
     {
-        
+        //print("tapRegister2 working")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "FondoThunderSound.png")!)
         
         // Redondear IMG
         self.editarIMG.layer.cornerRadius = 55

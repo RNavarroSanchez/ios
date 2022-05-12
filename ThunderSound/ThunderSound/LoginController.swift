@@ -16,29 +16,38 @@ class LoginController: UIViewController
     
     @IBAction func registerBT(_ sender: Any)
     {
-        
+        //print("tapRegister working")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Register1id") as! RegisterController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func loginBT(_ sender: Any)
     {
-        
+        //print("tapLogin working")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapRemember))
+        //Olvidar la contraseña
+        let tapOlvidar = UITapGestureRecognizer(target: self, action: #selector(self.tapRemember))
         rememberLB.isUserInteractionEnabled = true
-        rememberLB.addGestureRecognizer(tap)
+        rememberLB.addGestureRecognizer(tapOlvidar)
     }
 
     @objc
     func tapRemember()
     {
-        print("tapRemember working")
-        
+        //print("tapRemember working")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RememberPassid") as! RememberController
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
 }

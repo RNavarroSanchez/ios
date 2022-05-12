@@ -16,7 +16,11 @@ class RegisterController: UIViewController
     
     @IBAction func continueBTr(_ sender: Any)
     {
-        
+        //print("tapContinue working")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Register2id") as! Register2Controller
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad()

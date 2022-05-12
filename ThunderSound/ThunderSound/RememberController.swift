@@ -18,7 +18,7 @@ class RememberController: UIViewController
     
     @IBAction func atrasBT(_ sender: Any)
     {
-        
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad()
