@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fce-hh-8DN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XEx-9N-ExH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -154,7 +154,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88g-ce-kOU">
-                                <rect key="frame" x="80" y="562.66666666666663" width="215" height="32"/>
+                                <rect key="frame" x="80" y="542.66666666666663" width="215" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="215" id="ABR-Lc-1Gl"/>
                                 </constraints>
@@ -172,7 +172,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xe4-mz-XCi">
-                                <rect key="frame" x="35" y="482.66666666666669" width="305" height="25"/>
+                                <rect key="frame" x="35" y="462.66666666666669" width="305" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="b5C-fy-vMk"/>
                                 </constraints>
@@ -187,13 +187,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escribe tu correo electrónico abajo, te enviaremos un correo con tu información" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neE-AZ-hVc">
-                                <rect key="frame" x="59" y="334" width="257" height="58.333333333333314"/>
+                                <rect key="frame" x="59" y="314" width="257" height="58.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAH-PX-VM9">
-                                <rect key="frame" x="35" y="452.33333333333331" width="117" height="19.666666666666686"/>
+                                <rect key="frame" x="35" y="432.33333333333331" width="117" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -228,7 +228,7 @@
                             <constraint firstItem="FW8-Vj-QHG" firstAttribute="top" secondItem="WEl-Jq-HN5" secondAttribute="top" id="lpi-XI-AB3"/>
                             <constraint firstItem="TgD-4E-TDZ" firstAttribute="centerX" secondItem="8n2-Mq-Dt2" secondAttribute="centerX" id="mUm-ko-vT0"/>
                             <constraint firstItem="Ac9-UQ-fy5" firstAttribute="leading" secondItem="WEl-Jq-HN5" secondAttribute="leading" id="tKI-Do-Jpu"/>
-                            <constraint firstItem="neE-AZ-hVc" firstAttribute="top" secondItem="TgD-4E-TDZ" secondAttribute="bottom" constant="120" id="tZF-I5-Cuj"/>
+                            <constraint firstItem="neE-AZ-hVc" firstAttribute="top" secondItem="TgD-4E-TDZ" secondAttribute="bottom" constant="100" id="tZF-I5-Cuj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1785,6 +1785,13 @@
                                     <segue destination="RYd-Hx-tGu" kind="embed" id="y4H-WV-uOp"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jc-qN-QMJ">
+                                <rect key="frame" x="279" y="58" width="71" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="clear" catalog="system" subtitle=" Salir"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jg8-pr-4Br"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1963,7 +1970,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Pt-ZD-Zlx">
-                                <rect key="frame" x="0.0" y="44" width="343" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="343" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -1996,6 +2003,7 @@
         <image name="NotificacionBTwhite" width="33" height="34.333332061767578"/>
         <image name="PerfilBTwhite" width="36.333332061767578" height="33.666667938232422"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>

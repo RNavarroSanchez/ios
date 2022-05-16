@@ -50,4 +50,43 @@ class LoginController: UIViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
+
+//    let Url = String(format: "http://127.0.0.1:8001/api/auth/login")
+//        guard let serviceUrl = URL(string: Url) else { return }
+//        let parameters: [String: Any] = [
+//            "request": [
+//                    "xusercode" : "YOUR USERCODE HERE",
+//                    "xpassword": "YOUR PASSWORD HERE"
+//            ]
+//        ]
+//        var request = URLRequest(url: serviceUrl)
+//        request.httpMethod = "POST"
+//        request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+//        guard let httpBody =
+//        try? JSONSerialization.data(withJSONObject: parameters, options: [])
+//        else
+//        {
+//            return
+//        }
+//        request.httpBody = httpBody
+//        request.timeoutInterval = 20
+//        let session = URLSession.shared
+//        session.dataTask(with: request) { (data, response, error) in
+//            if let response = response
+//            {
+//                print(response)
+//            }
+//            if let data = data
+//            {
+//                do
+//                {
+//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                    print(json)
+//                } catch
+//                {
+//                    print(error)
+//                }
+//            }
+//        }.resume()
+//    }
 }
