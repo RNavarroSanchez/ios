@@ -9,38 +9,32 @@ import UIKit
 
 class LoginController: UIViewController
 {
-    
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var rememberLB: UILabel!
-    
     @IBAction func registerBT(_ sender: Any)
     {
         //print("tapRegister working")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Register1id") as! RegisterController
+        let vc = storyboard.instantiateViewController(withIdentifier: "Registerid") as! RegisterController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
     @IBAction func loginBT(_ sender: Any)
     {
         //print("tapLogin working")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        peticionLogin()
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        //Olvidar la contraseña
+        //tapOlvidar la contraseña
         let tapOlvidar = UITapGestureRecognizer(target: self, action: #selector(self.tapRemember))
         rememberLB.isUserInteractionEnabled = true
         rememberLB.addGestureRecognizer(tapOlvidar)
-        
-        peticionLogin()
+
     }
 
     @objc
@@ -72,10 +66,9 @@ class LoginController: UIViewController
         try? JSONSerialization.data(withJSONObject: parameters, options: [])
         else
         {
-            return print("Error")
+            return print("Error peticion")
         }
         request.httpBody = httpBody
-        request.timeoutInterval = 20 ///esto creo que no se va a necesitar
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response
@@ -88,6 +81,13 @@ class LoginController: UIViewController
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
+//                    DispatchQueue.main.async
+//                    {
+//                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                        let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
+//                        vc.modalPresentationStyle = .fullScreen
+//                        self.present(vc, animated: true, completion: nil)
+//                    }
                 } catch
                 {
                     print(error)
