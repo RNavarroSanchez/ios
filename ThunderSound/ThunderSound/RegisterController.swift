@@ -87,17 +87,8 @@ class RegisterController: UIViewController, UITextFieldDelegate
         self.descripcionTFr.layer.cornerRadius = 10
         self.descripcionTFr.clipsToBounds = true
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
-                view.addGestureRecognizer(tapGesture)
-    }
-    @objc func tapGestureHandler()
-    {
-        emailTFr.endEditing(true)
-        passTFr.endEditing(true)
-        passx2TFr.endEditing(true)
-        userTFr.endEditing(true)
-        nameTFr.endEditing(true)
-        subnameTFr.endEditing(true)
-        descripcionTFr.endEditing(true)
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 }

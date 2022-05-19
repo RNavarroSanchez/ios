@@ -54,13 +54,9 @@ class LoginController: UIViewController
         rememberLB.isUserInteractionEnabled = true
         rememberLB.addGestureRecognizer(tapOlvidar)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
-                view.addGestureRecognizer(tapGesture)
-    }
-    @objc func tapGestureHandler()
-    {
-        userTF.endEditing(true)
-        passwordTF.endEditing(true)
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 
     @objc
