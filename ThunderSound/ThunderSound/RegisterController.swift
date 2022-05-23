@@ -25,7 +25,7 @@ class RegisterController: UIViewController, UITextFieldDelegate
     {
         if emailTFr.text != "" && passTFr.text == passx2TFr.text && userTFr.text != "" && nameTFr.text != "" && subnameTFr.text != ""
         {
-            let Url = String(format: "http://127.0.0.1:8889/api/usuarios")
+            let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
             guard let serviceUrl = URL(string: Url) else { return }
             var request = URLRequest(url: serviceUrl)
             request.httpMethod = "POST"

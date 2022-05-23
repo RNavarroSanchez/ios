@@ -10,6 +10,7 @@ import UIKit
 class LoginController: UIViewController
 {
     var myResponse: [String: Any] = [:]
+    
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var rememberLB: UILabel!
@@ -71,7 +72,7 @@ class LoginController: UIViewController
     
     func peticionLogin(userTF: String, passwordTF: String)//Peticion Inicio de Sesión
     {
-        let Url = String(format: "http://127.0.0.1:8889/api/auth/login")//cambiar el puerto para pruebas
+        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/auth/login")//cambiar el puerto para pruebas
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "POST"
@@ -93,8 +94,9 @@ class LoginController: UIViewController
                     { [self] in
                         print(json)
                         self.myResponse = json as! [String: Any]
-                        if self.myResponse["code"] as! Int != 200
+                        if self.myResponse["error"] as? String == "Unauthorized"
                         {
+//                            print(self.myResponse["statusCode"])
                             let alert = UIAlertController(title: "Error", message: myResponse["message"] as? String, preferredStyle: .alert)
                             let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
                             alert.addAction(action)
@@ -126,18 +128,18 @@ class LoginController: UIViewController
 //                                present(alert, animated: true)
 //                            }
 //                        }
-                        if self.myResponse["code"] as! Int == 200
+                        if self.myResponse["access_token"] != nil
                         {
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
+
                             vc.modalPresentationStyle = .fullScreen
                             self.present(vc, animated: true, completion: nil)
                             
                             let shared = UserDefaults.standard
                             shared.setValue(userTF, forKey: "userTF")
                             shared.setValue(passwordTF, forKey: "passwordTF")
-                            let datos: [String: Any] = myResponse["data"] as! [String: Any]
-                            shared.setValue(datos["token"] as! String, forKey: "token")
+                            shared.setValue(myResponse["access_token"] as! String, forKey: "token")
                         }
                     }
                 } catch

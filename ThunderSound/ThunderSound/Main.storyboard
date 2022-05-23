@@ -20,7 +20,7 @@
         <!--login-->
         <scene sceneID="pxS-nJ-SqH">
             <objects>
-                <viewController title="login" interfaceStyle="light" id="XEx-9N-ExH" customClass="LoginController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Loginid" title="login" interfaceStyle="light" id="XEx-9N-ExH" customClass="LoginController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2AC-xA-Tva">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1744,17 +1744,24 @@
                                     <segue destination="RYd-Hx-tGu" kind="embed" id="y4H-WV-uOp"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jc-qN-QMJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jc-qN-QMJ">
                                 <rect key="frame" x="279" y="58" width="71" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="Oo5-U4-PNz"/>
+                                    <constraint firstAttribute="height" constant="29" id="SVP-oB-Lex"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="clear" catalog="system" subtitle=" Salir"/>
+                                <connections>
+                                    <action selector="logoutBTp:" destination="vmK-1x-9Sm" eventType="touchUpInside" id="Lpv-yQ-55l"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jg8-pr-4Br"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jg8-pr-4Br" firstAttribute="trailing" secondItem="5jc-qN-QMJ" secondAttribute="trailing" constant="25" id="0yr-Pz-FXr"/>
                             <constraint firstItem="Xcl-vo-px1" firstAttribute="leading" secondItem="jg8-pr-4Br" secondAttribute="leading" constant="20" id="1Zb-uR-aVO"/>
                             <constraint firstItem="vGF-TI-fW6" firstAttribute="leading" secondItem="Xcl-vo-px1" secondAttribute="trailing" constant="5" id="1n7-1Q-Wtf"/>
                             <constraint firstItem="jg8-pr-4Br" firstAttribute="trailing" secondItem="8D6-jB-j7P" secondAttribute="trailing" constant="-9" id="3e9-7r-0sv"/>
@@ -1768,6 +1775,7 @@
                             <constraint firstItem="6LY-YR-fb7" firstAttribute="leading" secondItem="EES-2g-xdp" secondAttribute="trailing" constant="8" symbolic="YES" id="HN5-RH-I4f"/>
                             <constraint firstItem="BPs-SU-PM4" firstAttribute="leading" secondItem="jg8-pr-4Br" secondAttribute="leading" id="HVK-jq-h3Q"/>
                             <constraint firstItem="8D6-jB-j7P" firstAttribute="leading" secondItem="6LY-YR-fb7" secondAttribute="trailing" constant="5" id="Hdt-r7-2v7"/>
+                            <constraint firstItem="5jc-qN-QMJ" firstAttribute="top" secondItem="jg8-pr-4Br" secondAttribute="top" constant="14" id="Jxd-Jd-bPF"/>
                             <constraint firstItem="Igc-ae-NY1" firstAttribute="top" secondItem="xpG-jH-5hb" secondAttribute="bottom" constant="15.5" id="MO5-al-xUy"/>
                             <constraint firstItem="Igc-ae-NY1" firstAttribute="leading" secondItem="tES-PP-ONg" secondAttribute="trailing" constant="17" id="Me5-uR-VDf"/>
                             <constraint firstItem="Igc-ae-NY1" firstAttribute="top" secondItem="vvv-ez-K6Y" secondAttribute="bottom" constant="16" id="OuX-J9-Ey0"/>
@@ -1814,11 +1822,11 @@
             <objects>
                 <viewController id="RYd-Hx-tGu" customClass="NavegationController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO0-xd-Bri">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN7-PZ-nCH">
-                                <rect key="frame" x="0.0" y="16" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="15" width="375" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o17-y7-ckV">
                                         <rect key="frame" x="8" y="8" width="40" height="38"/>
@@ -1949,7 +1957,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lum-az-ZPa"/>
+        <segue reference="y4H-WV-uOp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BuscarBTwhite" width="46.333332061767578" height="41"/>
