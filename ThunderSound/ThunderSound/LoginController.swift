@@ -40,7 +40,7 @@ class LoginController: UIViewController
         super.viewDidLoad()
         var preferences = UserDefaults.standard
 
-        if let user = preferences.string(forKey: "userTF") //aqui va esto o el nick??
+        if let user = preferences.string(forKey: "userTF")
         {
             if let pass = preferences.string(forKey: "passwordTF")
             {
@@ -90,9 +90,11 @@ class LoginController: UIViewController
                 do
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    
                     DispatchQueue.main.async
                     { [self] in
                         print(json)
+                        
                         self.myResponse = json as! [String: Any]
                         if self.myResponse["error"] as? String == "Unauthorized"
                         {
@@ -132,7 +134,6 @@ class LoginController: UIViewController
                         {
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
-
                             vc.modalPresentationStyle = .fullScreen
                             self.present(vc, animated: true, completion: nil)
                             

@@ -23,56 +23,16 @@ class RegisterController: UIViewController, UITextFieldDelegate
     
     @IBAction func registerBTr(_ sender: Any)
     {
-        if emailTFr.text != "" && passTFr.text == passx2TFr.text && userTFr.text != "" && nameTFr.text != "" && subnameTFr.text != ""
+        if emailTFr.text != "" && passTFr.text == passx2TFr.text && userTFr.text != "" && nameTFr.text != "" && subnameTFr.text != "" && descripcionTFr.text != ""
         {
-            let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
-            guard let serviceUrl = URL(string: Url) else { return }
-            var request = URLRequest(url: serviceUrl)
-            request.httpMethod = "POST"
-            request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-            let bodyData = "correo=\(emailTFr.text ?? "")&password=\(passTFr.text ?? "")&nick=\(userTFr.text ?? "")&nombre=\(nameTFr.text ?? "")&apellidos=\(subnameTFr.text ?? "")&descripcion=\(descripcionTFr.text ?? "")"
-            request.httpBody = bodyData.data(using: String.Encoding.utf8);
-
-            let session = URLSession.shared
-            session.dataTask(with: request) { (data, response, error) in
-                if let response = response
-                {
-                    print(response)
-                }
-                if let data = data
-                {
-                    do
-                    {
-                        let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        
-                        DispatchQueue.main.async
-                        {
-                            self.myDictionary = json as! [String: Any]
-
-                            if self.myDictionary["code"] as! Int == 200
-                            {
-                                let alert = UIAlertController(title: "LLego el momento...", message: "Registro completado con éxito", preferredStyle: .alert)
-                                let action = UIAlertAction(title: "Aceptar", style: .default, handler: {_ in
-                                    self.navigationController?.popToRootViewController(animated: true)
-                                })
-                                alert.addAction(action)
-                                self.present(alert, animated: true, completion: nil)
-                                
-                            } else
-                            {
-                                let alert = UIAlertController(title: "Error", message: self.myDictionary["message"] as? String, preferredStyle: .alert)
-                                let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-                                alert.addAction(action)
-                                self.present(alert, animated: true, completion: nil)
-                            }
-                        }
-                    } catch
-                    {
-                        print(error)
-                    }
-                }
-            }.resume()
-        } else {print("Error en la peticionRegister ")}
+            peticionRegister(emailTFr: emailTFr.text!, passTFr: passTFr.text!, passx2TFr: passx2TFr.text!, userTFr: userTFr.text!, nameTFr: nameTFr.text!, subnameTFr: subnameTFr.text!, descripcionTFr: descripcionTFr.text!, editarIMG: editarIMG.image!)// editarIMG: editarIMG.UIImageView!
+        } else
+        {
+            let alert = UIAlertController(title: "Error", message: "No puedes dejar un campo sin rellenar", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad()
@@ -90,5 +50,60 @@ class RegisterController: UIViewController, UITextFieldDelegate
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+    }
+        
+    func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, editarIMG: UIImage)//editarIMG: imagen
+    {
+        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
+        guard let serviceUrl = URL(string: Url) else { return }
+        var request = URLRequest(url: serviceUrl)
+        request.httpMethod = "POST"
+        request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let bodyData = "correo=\(emailTFr)&password=\(passTFr)&nick=\(userTFr)&nombre=\(nameTFr)&apellidos=\(subnameTFr)&descripcion=\(descripcionTFr)&foto_url=\(editarIMG)" ///&foto_url=\(editarIMG.image ?? "")
+        request.httpBody = bodyData.data(using: String.Encoding.utf8);
+
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response
+            {
+                print(response)
+            }
+            if let data = data
+            {
+                do
+                {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    
+                    DispatchQueue.main.async
+                    {
+                        self.myDictionary = json as! [String: Any]
+                        print(json)
+                        
+                        if self.myDictionary["code"] as! Int == 200
+                        {
+                            let alert = UIAlertController(title: "LLego el momento...", message: "Registro completado con éxito", preferredStyle: .alert)
+                            let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                            alert.addAction(action)
+                            self.present(alert, animated: true, completion: nil)
+                            
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = storyboard.instantiateViewController(withIdentifier: "Loginid") as! LoginController
+                            vc.modalPresentationStyle = .fullScreen
+                            self.present(vc, animated: true, completion: nil)
+                            
+                        } else
+                        {
+                            let alert = UIAlertController(title: "Error != 200", message: self.myDictionary["message"] as? String, preferredStyle: .alert)
+                            let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                            alert.addAction(action)
+                            self.present(alert, animated: true)
+                        }
+                    }
+                } catch
+                {
+                    print(error)
+                }
+            }
+        }.resume()
     }
 }
