@@ -23,7 +23,7 @@ class RegisterController: UIViewController, UITextFieldDelegate
     
     @IBAction func registerBTr(_ sender: Any)
     {
-        if emailTFr.text != "" && passTFr.text == passx2TFr.text && userTFr.text != "" && nameTFr.text != "" && subnameTFr.text != "" && descripcionTFr.text != ""
+        if emailTFr.text != nil && passTFr.text == passx2TFr.text && userTFr.text != nil && nameTFr.text != nil && subnameTFr.text != nil && descripcionTFr.text != nil
         {
             peticionRegister(emailTFr: emailTFr.text!, passTFr: passTFr.text!, passx2TFr: passx2TFr.text!, userTFr: userTFr.text!, nameTFr: nameTFr.text!, subnameTFr: subnameTFr.text!, descripcionTFr: descripcionTFr.text!, editarIMG: editarIMG.image!)// editarIMG: editarIMG.UIImageView!
         } else
@@ -52,7 +52,7 @@ class RegisterController: UIViewController, UITextFieldDelegate
         view.addGestureRecognizer(tap)
     }
         
-    func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, editarIMG: UIImage)//editarIMG: imagen
+    func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, editarIMG: UIImage)//editarIMG: imagen //Peticion Registrar Usuario
     {
         let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
         guard let serviceUrl = URL(string: Url) else { return }
@@ -82,7 +82,7 @@ class RegisterController: UIViewController, UITextFieldDelegate
                         if self.myDictionary["code"] as! Int == 200
                         {
                             let alert = UIAlertController(title: "LLego el momento...", message: "Registro completado con éxito", preferredStyle: .alert)
-                            let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
                             alert.addAction(action)
                             self.present(alert, animated: true, completion: nil)
                             
@@ -94,7 +94,7 @@ class RegisterController: UIViewController, UITextFieldDelegate
                         } else
                         {
                             let alert = UIAlertController(title: "Error != 200", message: self.myDictionary["message"] as? String, preferredStyle: .alert)
-                            let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
                             alert.addAction(action)
                             self.present(alert, animated: true)
                         }

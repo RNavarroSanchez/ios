@@ -23,7 +23,7 @@ class LoginController: UIViewController
     }
     @IBAction func loginBT(_ sender: Any)//Inicio de Sesión
     {
-        if userTF.text != "" || passwordTF.text != ""
+        if userTF.text != nil || passwordTF.text != nil
         {
             peticionLogin(userTF: userTF.text!, passwordTF: passwordTF.text!)
         } else
@@ -72,7 +72,7 @@ class LoginController: UIViewController
     
     func peticionLogin(userTF: String, passwordTF: String)//Peticion Inicio de Sesión
     {
-        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/auth/login")//cambiar el puerto para pruebas
+        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/auth/login")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "POST"
@@ -100,7 +100,7 @@ class LoginController: UIViewController
                         {
 //                            print(self.myResponse["statusCode"])
                             let alert = UIAlertController(title: "Error", message: myResponse["message"] as? String, preferredStyle: .alert)
-                            let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
                             alert.addAction(action)
                             present(alert, animated: true)
                             
@@ -108,7 +108,7 @@ class LoginController: UIViewController
 //                        if self.myResponse["code"] as! Int == 404
 //                        {
 //                            let alert = UIAlertController(title: "Error", message: myResponse["message"] as? String, preferredStyle: .alert)
-//                            let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+//                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
 //                            alert.addAction(action)
 //                            present(alert, animated: true)
 //                        }
@@ -118,14 +118,14 @@ class LoginController: UIViewController
 //                            if let email = errores["email"] as? [String]
 //                            {
 //                                let alert = UIAlertController(title: "Error", message: email[0], preferredStyle: .alert)
-//                                let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+//                                let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
 //                                alert.addAction(action)
 //                                present(alert, animated: true)
 //                            }
 //                            if let password = errores["password"] as? [String]
 //                            {
 //                                let alert = UIAlertController(title: "Error", message: password[0], preferredStyle: .alert)
-//                                let action = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+//                                let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
 //                                alert.addAction(action)
 //                                present(alert, animated: true)
 //                            }
