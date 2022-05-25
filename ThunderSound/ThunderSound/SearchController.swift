@@ -53,7 +53,7 @@ class SearchController: UIViewController
         request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         let bodyData = "nick=\(searchTF)"
        
-        request.setValue("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zNS4xODEuMTYwLjEzOFwvcHJveWVjdG9zXC90aHVuZGVyMjJcL3B1YmxpY1wvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MzQxMDE3OSwiZXhwIjoxNjUzNDEzNzc5LCJuYmYiOjE2NTM0MTAxNzksImp0aSI6Ik14ZTZvajlFOEVaYXZteTMiLCJzdWIiOjUxLCJwcnYiOiIwYjBjZjUwYWYxMjNkODUwNmUxNmViYTdjYjY3NjI5NzRkYTNhYzNhIn0.X96kC-Erk2_YvifV3t27SqEfEgwXLY-b_5LkEA-2sYQ", forHTTPHeaderField: "Authorization")//shared.string(forKey: "token") o como
+        request.setValue("Bearer \(shared.string(forKey: "token")!)", forHTTPHeaderField: "Authorization")//shared.string(forKey: "token") o como
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
 
         let session = URLSession.shared

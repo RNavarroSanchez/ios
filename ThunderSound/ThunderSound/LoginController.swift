@@ -63,7 +63,6 @@ class LoginController: UIViewController
     @objc
     func tapRemember()//OLVIDAR CONTRASEÑA
     {
-        //print("tapRemember working")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RememberPassid") as! RememberController
         vc.modalPresentationStyle = .fullScreen
@@ -105,31 +104,6 @@ class LoginController: UIViewController
                             present(alert, animated: true)
                             
                         }
-//                        if self.myResponse["code"] as! Int == 404
-//                        {
-//                            let alert = UIAlertController(title: "Error", message: myResponse["message"] as? String, preferredStyle: .alert)
-//                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
-//                            alert.addAction(action)
-//                            present(alert, animated: true)
-//                        }
-//                        if self.myResponse["code"] as! Int == 400
-//                        {
-//                            let errores = myResponse["errors"] as! [String: Any]
-//                            if let email = errores["email"] as? [String]
-//                            {
-//                                let alert = UIAlertController(title: "Error", message: email[0], preferredStyle: .alert)
-//                                let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
-//                                alert.addAction(action)
-//                                present(alert, animated: true)
-//                            }
-//                            if let password = errores["password"] as? [String]
-//                            {
-//                                let alert = UIAlertController(title: "Error", message: password[0], preferredStyle: .alert)
-//                                let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
-//                                alert.addAction(action)
-//                                present(alert, animated: true)
-//                            }
-//                        }
                         if self.myResponse["access_token"] != nil
                         {
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -142,6 +116,7 @@ class LoginController: UIViewController
                             shared.setValue(passwordTF, forKey: "passwordTF")
                             shared.setValue(myResponse["access_token"] as! String, forKey: "token")
                         }
+                        //eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zNS4xODEuMTYwLjEzOFwvcHJveWVjdG9zXC90aHVuZGVyMjJcL3B1YmxpY1wvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MzQ5NDA1MywiZXhwIjoxNjUzNDk3NjUzLCJuYmYiOjE2NTM0OTQwNTMsImp0aSI6Im5XNWZKUG40ckFUdEFyRzgiLCJzdWIiOjUxLCJwcnYiOiIwYjBjZjUwYWYxMjNkODUwNmUxNmViYTdjYjY3NjI5NzRkYTNhYzNhIn0.icrjZxxHaji2AQEpNaSkWcmpwFj47DolrppHcBN_BgM
                     }
                 } catch
                 {

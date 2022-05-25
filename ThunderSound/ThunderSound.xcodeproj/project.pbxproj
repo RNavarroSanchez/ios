@@ -18,13 +18,13 @@
 		A940140527DA50BA0087C6E6 /* PTSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A940140127DA50BA0087C6E6 /* PTSans-Italic.ttf */; };
 		A94195EA27EB92330006E2CD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195E927EB92330006E2CD /* LoginController.swift */; };
 		A94195EC27EB923D0006E2CD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195EB27EB923D0006E2CD /* RegisterController.swift */; };
-		A94195EE27EB928C0006E2CD /* Register2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195ED27EB928C0006E2CD /* Register2Controller.swift */; };
 		A94195F027EB97C60006E2CD /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195EF27EB97C60006E2CD /* SearchController.swift */; };
 		A94195F227EB9FF50006E2CD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94195F127EB9FF50006E2CD /* TabBar.swift */; };
 		A9486D43283D2EDD00C7B280 /* SearchPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9486D42283D2EDD00C7B280 /* SearchPostController.swift */; };
 		A9486D45283D452B00C7B280 /* NotifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9486D44283D452B00C7B280 /* NotifTableViewCell.swift */; };
 		A94ABF0E281AE936000D3794 /* NavegationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94ABF0D281AE936000D3794 /* NavegationController.swift */; };
 		A94ABF10281B03D3000D3794 /* RememberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94ABF0F281B03D3000D3794 /* RememberController.swift */; };
+		A94DD394283E91A6007D45AA /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DD393283E91A6007D45AA /* SearchTableViewCell.swift */; };
 		A9557EC6282ACC250074999C /* SeguidoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557EC5282ACC250074999C /* SeguidoresController.swift */; };
 		A9557EC8282ACCD50074999C /* SeguidosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557EC7282ACCD50074999C /* SeguidosController.swift */; };
 		A9557ECA282ACF4B0074999C /* FollowsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557EC9282ACF4B0074999C /* FollowsController.swift */; };
@@ -50,13 +50,13 @@
 		A940140127DA50BA0087C6E6 /* PTSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Italic.ttf"; sourceTree = "<group>"; };
 		A94195E927EB92330006E2CD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A94195EB27EB923D0006E2CD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		A94195ED27EB928C0006E2CD /* Register2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2Controller.swift; sourceTree = "<group>"; };
 		A94195EF27EB97C60006E2CD /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		A94195F127EB9FF50006E2CD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		A9486D42283D2EDD00C7B280 /* SearchPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostController.swift; sourceTree = "<group>"; };
 		A9486D44283D452B00C7B280 /* NotifTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifTableViewCell.swift; sourceTree = "<group>"; };
 		A94ABF0D281AE936000D3794 /* NavegationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavegationController.swift; sourceTree = "<group>"; };
 		A94ABF0F281B03D3000D3794 /* RememberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberController.swift; sourceTree = "<group>"; };
+		A94DD393283E91A6007D45AA /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		A9557EC5282ACC250074999C /* SeguidoresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguidoresController.swift; sourceTree = "<group>"; };
 		A9557EC7282ACCD50074999C /* SeguidosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguidosController.swift; sourceTree = "<group>"; };
 		A9557EC9282ACF4B0074999C /* FollowsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowsController.swift; sourceTree = "<group>"; };
@@ -118,6 +118,7 @@
 				A9557EC9282ACF4B0074999C /* FollowsController.swift */,
 				A9557EC7282ACCD50074999C /* SeguidosController.swift */,
 				A93E2B0F281856DB00A20CA4 /* PerfilController.swift */,
+				A94DD393283E91A6007D45AA /* SearchTableViewCell.swift */,
 				A9486D42283D2EDD00C7B280 /* SearchPostController.swift */,
 				A93E2B11281856EA00A20CA4 /* SeguirController.swift */,
 				A94ABF0F281B03D3000D3794 /* RememberController.swift */,
@@ -129,7 +130,6 @@
 				A94ABF0D281AE936000D3794 /* NavegationController.swift */,
 				A94195EB27EB923D0006E2CD /* RegisterController.swift */,
 				A9B4434A27D65770005A9141 /* SceneDelegate.swift */,
-				A94195ED27EB928C0006E2CD /* Register2Controller.swift */,
 				A93C5D2C281711830006E18C /* InicioController.swift */,
 				A94195EF27EB97C60006E2CD /* SearchController.swift */,
 				A94195F127EB9FF50006E2CD /* TabBar.swift */,
@@ -224,9 +224,9 @@
 				A94195EC27EB923D0006E2CD /* RegisterController.swift in Sources */,
 				A93E2B1628185BF600A20CA4 /* TabBarController.swift in Sources */,
 				A94195F027EB97C60006E2CD /* SearchController.swift in Sources */,
-				A94195EE27EB928C0006E2CD /* Register2Controller.swift in Sources */,
 				A94ABF0E281AE936000D3794 /* NavegationController.swift in Sources */,
 				A93C5D2D281711830006E18C /* InicioController.swift in Sources */,
+				A94DD394283E91A6007D45AA /* SearchTableViewCell.swift in Sources */,
 				A9557EC6282ACC250074999C /* SeguidoresController.swift in Sources */,
 				A94ABF10281B03D3000D3794 /* RememberController.swift in Sources */,
 				A94195EA27EB92330006E2CD /* LoginController.swift in Sources */,
@@ -373,6 +373,8 @@
 				DEVELOPMENT_TEAM = 7DTLRHN6WR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ThunderSound/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permisos de camara.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permisos de galeria";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -401,6 +403,8 @@
 				DEVELOPMENT_TEAM = 7DTLRHN6WR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ThunderSound/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permisos de camara.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permisos de galeria";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

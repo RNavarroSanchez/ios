@@ -7,14 +7,30 @@
 
 import UIKit
 
-class RegisterController: UIViewController, UITextFieldDelegate
+class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
-    
     @IBAction func atrasBT(_ sender: Any) {dismiss(animated: true, completion: nil)}
     @IBOutlet var emailTFr: UITextField!
     @IBOutlet var passTFr: UITextField!
     @IBOutlet var passx2TFr: UITextField!
     @IBOutlet var editarIMG: UIImageView!
+    @IBAction func addImage(_ sender: Any)
+    {
+        let ac = UIAlertController(title: "Seleccionar Imagen", message: "Seleccione una imagen", preferredStyle: .actionSheet)
+        let cameraBT = UIAlertAction(title: "Camara", style: .default)
+        { (_) in
+            self.showImagePicker(selectedSource: .camera)
+        }
+        let galeriaBT = UIAlertAction(title: "Galeria", style: .default)
+        { (_) in
+            self.showImagePicker(selectedSource: .photoLibrary)
+        }
+        let cancelBT = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cameraBT)
+        ac.addAction(galeriaBT)
+        ac.addAction(cancelBT)
+        self.present(ac, animated: true, completion: nil)
+    }
     @IBOutlet var userTFr: UITextField!
     @IBOutlet var nameTFr: UITextField!
     @IBOutlet var subnameTFr: UITextField!
@@ -105,5 +121,35 @@ class RegisterController: UIViewController, UITextFieldDelegate
                 }
             }
         }.resume()
+    }
+    func showImagePicker(selectedSource: UIImagePickerController.SourceType)
+    {
+        guard UIImagePickerController.isSourceTypeAvailable(selectedSource) else
+        {
+            print("Recurso seleccionado no disponible.")
+            return
+        }
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = selectedSource
+        imagePickerController.allowsEditing = false
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
+        if let selectedImage = info[.originalImage] as? UIImage
+        {
+            editarIMG.image = selectedImage
+        } else
+        {
+            print("No se encuentra la imagen.")
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
+    {
+        picker.dismiss(animated: true, completion: nil)
     }
 }

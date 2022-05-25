@@ -15,8 +15,8 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad()
     {
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        notificationTV.delegate = self
+        notificationTV.dataSource = self
         super.viewDidLoad()
     }
 
