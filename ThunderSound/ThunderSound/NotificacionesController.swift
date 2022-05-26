@@ -28,13 +28,12 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notifCell", for: indexPath) as! NotifTableViewCell
-       
         let url = NSURL(string: usuarios[indexPath.row]["image"] as! String)
         let data = NSData(contentsOf: url! as URL)
-        if data != nil {
+        if data != nil
+        {
             cell.iconNotifIMG.image = UIImage(data: data! as Data)
         }
-        
         cell.textoNotifTV.text = (usuarios[indexPath.row]["tipo"] as! String)
         
         return cell

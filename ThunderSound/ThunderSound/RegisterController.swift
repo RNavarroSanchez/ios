@@ -39,9 +39,13 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     @IBAction func registerBTr(_ sender: Any)
     {
+//        let imgString = self.editarIMG.image
+//        let base64 = imgString?.base64
+//        let rebornImg = base64?.imageFromBase64
+        let imgString = editarIMG.image?.pngData()?.base64EncodedString()
         if emailTFr.text != nil && passTFr.text == passx2TFr.text && userTFr.text != nil && nameTFr.text != nil && subnameTFr.text != nil && descripcionTFr.text != nil
         {
-            peticionRegister(emailTFr: emailTFr.text!, passTFr: passTFr.text!, passx2TFr: passx2TFr.text!, userTFr: userTFr.text!, nameTFr: nameTFr.text!, subnameTFr: subnameTFr.text!, descripcionTFr: descripcionTFr.text!, editarIMG: editarIMG.image!)// editarIMG: editarIMG.UIImageView!
+            peticionRegister(emailTFr: emailTFr.text!, passTFr: passTFr.text!, passx2TFr: passx2TFr.text!, userTFr: userTFr.text!, nameTFr: nameTFr.text!, subnameTFr: subnameTFr.text!, descripcionTFr: descripcionTFr.text!, imgString: userTFr.text!)// editarIMG: editarIMG.UIImageView!
         } else
         {
             let alert = UIAlertController(title: "Error", message: "No puedes dejar un campo sin rellenar", preferredStyle: .alert)
@@ -68,14 +72,16 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         view.addGestureRecognizer(tap)
     }
         
-    func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, editarIMG: UIImage)//editarIMG: imagen //Peticion Registrar Usuario
+    func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, imgString: String)//editarIMG: imagen //Peticion Registrar Usuario
     {
+        let imgString = editarIMG.image?.pngData()?.base64EncodedString()
+        print(imgString)
         let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "POST"
         request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let bodyData = "correo=\(emailTFr)&password=\(passTFr)&nick=\(userTFr)&nombre=\(nameTFr)&apellidos=\(subnameTFr)&descripcion=\(descripcionTFr)&foto_url=\(editarIMG)" ///&foto_url=\(editarIMG.image ?? "")
+        let bodyData = "correo=\(emailTFr)&password=\(passTFr)&nick=\(userTFr)&nombre=\(nameTFr)&apellidos=\(subnameTFr)&descripcion=\(descripcionTFr)&foto_url=\(String(describing: imgString))" ///&foto_url=\(editarIMG.image ?? "")
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
 
         let session = URLSession.shared
@@ -147,9 +153,30 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         }
         picker.dismiss(animated: true, completion: nil)
     }
-    
+
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
     {
         picker.dismiss(animated: true, completion: nil)
     }
 }
+
+//extension UIImage
+//{
+//    var base64: String?
+//    {
+//        self.jpegData(compressionQuality: 1)?.base64EncodedString()
+//    }
+//}
+//
+//extension String
+//{
+//    var imageFromBase64: UIImage?
+//    {
+//        guard let imageData = Data(base64Encoded: self, options: .ignoreUnknownCharacters) else
+//        {
+//            return nil
+//        }
+//        return UIImage(data: imageData)
+//    }
+//}
+

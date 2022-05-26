@@ -97,7 +97,6 @@ class LoginController: UIViewController
                         self.myResponse = json as! [String: Any]
                         if self.myResponse["error"] as? String == "Unauthorized"
                         {
-//                            print(self.myResponse["statusCode"])
                             let alert = UIAlertController(title: "Error", message: myResponse["message"] as? String, preferredStyle: .alert)
                             let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
                             alert.addAction(action)
@@ -116,7 +115,6 @@ class LoginController: UIViewController
                             shared.setValue(passwordTF, forKey: "passwordTF")
                             shared.setValue(myResponse["access_token"] as! String, forKey: "token")
                         }
-                        //eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zNS4xODEuMTYwLjEzOFwvcHJveWVjdG9zXC90aHVuZGVyMjJcL3B1YmxpY1wvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MzQ5NDA1MywiZXhwIjoxNjUzNDk3NjUzLCJuYmYiOjE2NTM0OTQwNTMsImp0aSI6Im5XNWZKUG40ckFUdEFyRzgiLCJzdWIiOjUxLCJwcnYiOiIwYjBjZjUwYWYxMjNkODUwNmUxNmViYTdjYjY3NjI5NzRkYTNhYzNhIn0.icrjZxxHaji2AQEpNaSkWcmpwFj47DolrppHcBN_BgM
                     }
                 } catch
                 {
