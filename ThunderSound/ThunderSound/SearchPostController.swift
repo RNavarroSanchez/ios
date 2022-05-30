@@ -2,10 +2,11 @@
 //  SearchPostController.swift
 //  ThunderSound
 //
-//  Created by A1-IMAC08 on 24/5/22.
+//  Created by Juanjo
 //
 
 import UIKit
+import WebKit
 
 class SearchPostController: UIViewController
 {
@@ -13,6 +14,7 @@ class SearchPostController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
     }
 
 }

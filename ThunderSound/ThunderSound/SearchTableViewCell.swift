@@ -9,14 +9,9 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell
 {
-
     @IBOutlet var nameLB: UILabel!
     @IBOutlet var nickLB: UILabel!
     @IBOutlet var perfilIMG: UIImageView!
-    @IBAction func deleteSearchBT(_ sender: Any)
-    {
-        
-    }
     
     override func awakeFromNib()
     {

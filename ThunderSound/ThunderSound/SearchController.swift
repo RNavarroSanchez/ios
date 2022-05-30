@@ -58,7 +58,7 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
             cell.perfilIMG.image = UIImage(data: data! as Data)
         }
         cell.nameLB.text = (usuarios[indexPath.row]["nombre"] as! String)
-        cell.nickLB.text = (usuarios[indexPath.row]["nick"] as! String)//lo que hay entre comillas es fumada
+        cell.nickLB.text = (usuarios[indexPath.row]["nick"] as! String)
         return cell
     }
     

@@ -30,8 +30,8 @@
             filePath = "ThunderSound/RegisterController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "peticionRegister(emailTFr:passTFr:passx2TFr:userTFr:nameTFr:subnameTFr:descripcionTFr:imgString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "ThunderSound/RegisterController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "peticionRegister(emailTFr:passTFr:passx2TFr:userTFr:nameTFr:subnameTFr:descripcionTFr:imgString:)"
             landmarkType = "7">
          </BreakpointContent>
