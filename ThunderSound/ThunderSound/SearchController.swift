@@ -29,7 +29,9 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Redondear searchBT
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         let path = UIBezierPath(roundedRect:searchEditBT.bounds,
                                 byRoundingCorners:[.topRight, .bottomRight],
                                 cornerRadii: CGSize(width: 6, height:  6))
@@ -86,22 +88,23 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 do
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    DispatchQueue.main.async
+                    
+                    self.mySearch = json as! [String: Any]
+                    print(json)
+                    
+                    if self.mySearch["error"] as? String == nil
                     {
-                        self.mySearch = json as! [String: Any]
-                        print(json)
-                        
-                        if self.mySearch["error"] as? String == nil
+                        self.usuarios = self.mySearch["data"] as! [[String: Any]]
+                        DispatchQueue.main.async
                         {
-                            self.usuarios = self.mySearch["data"] as! [[String: Any]]
                             self.tableView.reloadData()
-                        } else
-                        {
-                            let alert = UIAlertController(title: "Error != 200", message: self.mySearch["message"] as? String, preferredStyle: .alert)
-                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
-                            alert.addAction(action)
-                            self.present(alert, animated: true)
                         }
+                    } else
+                    {
+                        let alert = UIAlertController(title: "Error != 200", message: self.mySearch["message"] as? String, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
+                        alert.addAction(action)
+                        self.present(alert, animated: true)
                     }
                 } catch
                 {
@@ -110,5 +113,7 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
         }.resume()
     }
+    
+    
     
 }

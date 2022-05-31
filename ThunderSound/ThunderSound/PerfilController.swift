@@ -10,7 +10,7 @@ import UIKit
 class PerfilController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
     var datos1: Array<String> = []
-
+    
     @IBOutlet var userNameLBp: UILabel!
     @IBOutlet var myProfileIVp: UIImageView!
     @IBOutlet var followersLBp: UILabel!

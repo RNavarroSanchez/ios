@@ -16,6 +16,8 @@ class SearchTableViewCell: UITableViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        self.perfilIMG.layer.cornerRadius = 40
+        self.perfilIMG.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool)

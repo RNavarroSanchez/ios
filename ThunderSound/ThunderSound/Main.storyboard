@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lxW-f1-c6I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OLL-nO-o2L">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--login-->
+        <!--Login-->
         <scene sceneID="pxS-nJ-SqH">
             <objects>
-                <viewController storyboardIdentifier="Loginid" title="login" interfaceStyle="light" id="XEx-9N-ExH" customClass="LoginController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Loginid" title="Login" interfaceStyle="light" id="XEx-9N-ExH" customClass="LoginController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2AC-xA-Tva">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="1348" y="134"/>
         </scene>
-        <!--recuperar contraseña-->
+        <!--Recuperar Contraseña-->
         <scene sceneID="9Fc-mp-LBz">
             <objects>
-                <viewController storyboardIdentifier="RememberPassid" title="recuperar contraseña" id="61u-pv-RQs" customClass="RememberController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RememberPassid" title="Recuperar Contraseña" id="61u-pv-RQs" customClass="RememberController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8n2-Mq-Dt2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,10 +239,10 @@
             </objects>
             <point key="canvasLocation" x="1348" y="820"/>
         </scene>
-        <!--terminar registro-->
+        <!--Registro-->
         <scene sceneID="Wkk-h8-2e0">
             <objects>
-                <viewController storyboardIdentifier="Registerid" title="terminar registro" interfaceStyle="light" id="atO-Q5-ROL" customClass="RegisterController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Registerid" title="Registro" interfaceStyle="light" id="atO-Q5-ROL" customClass="RegisterController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AoC-0c-brI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,10 +483,10 @@
             </objects>
             <point key="canvasLocation" x="2167.1999999999998" y="134.48275862068965"/>
         </scene>
-        <!--buscar usuario-->
+        <!--Buscar Usuario-->
         <scene sceneID="x99-ni-ue0">
             <objects>
-                <viewController storyboardIdentifier="SearchUserid" title="buscar usuario" id="OLL-nO-o2L" customClass="SearchController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchUserid" title="Buscar Usuario" id="OLL-nO-o2L" customClass="SearchController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0mM-8l-9l1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,10 +526,10 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZEo-hB-ElA">
-                                <rect key="frame" x="25" y="168" width="325" height="536"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="25" y="168" width="325" height="585"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="536" id="kR8-vz-Ld6"/>
+                                    <constraint firstAttribute="height" constant="585" id="kR8-vz-Ld6"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="102" id="xW3-vM-N2S" customClass="SearchTableViewCell" customModule="ThunderSound" customModuleProvider="target">
@@ -549,13 +549,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIa-18-LpK">
-                                                    <rect key="frame" x="116" y="45.666666666666664" width="186" height="15.333333333333336"/>
+                                                    <rect key="frame" x="116" y="50.666666666666664" width="186" height="15.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="186" id="85D-zO-Jyk"/>
                                                         <constraint firstAttribute="height" constant="15.5" id="ENA-hL-RhO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EditarFoto" translatesAutoresizingMaskIntoConstraints="NO" id="Y5d-Mt-uOU">
@@ -571,14 +571,14 @@
                                                 <constraint firstItem="Hvb-0a-JE0" firstAttribute="top" secondItem="LA7-H3-plW" secondAttribute="topMargin" constant="8" id="EbW-XR-WzZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="Y5d-Mt-uOU" secondAttribute="bottom" constant="10" id="IES-qb-GJB"/>
                                                 <constraint firstItem="pIa-18-LpK" firstAttribute="leading" secondItem="Y5d-Mt-uOU" secondAttribute="trailing" constant="20" id="Qnb-0C-STS"/>
-                                                <constraint firstItem="pIa-18-LpK" firstAttribute="top" secondItem="Hvb-0a-JE0" secondAttribute="bottom" constant="3" id="Rb0-KQ-CvL"/>
+                                                <constraint firstItem="pIa-18-LpK" firstAttribute="top" secondItem="Hvb-0a-JE0" secondAttribute="bottom" constant="7.9999999999999574" id="Rb0-KQ-CvL"/>
                                                 <constraint firstItem="Y5d-Mt-uOU" firstAttribute="leading" secondItem="LA7-H3-plW" secondAttribute="leading" constant="10" id="crr-vx-ZPZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="pIa-18-LpK" secondAttribute="bottom" constant="30" id="iNm-bj-lmy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pIa-18-LpK" secondAttribute="bottom" constant="25.000000000000028" id="iNm-bj-lmy"/>
                                                 <constraint firstItem="Y5d-Mt-uOU" firstAttribute="top" secondItem="LA7-H3-plW" secondAttribute="top" constant="10" id="kvH-tn-0ZW"/>
-                                                <constraint firstItem="pIa-18-LpK" firstAttribute="top" secondItem="Hvb-0a-JE0" secondAttribute="bottom" constant="3" id="zgQ-Ce-f0o"/>
+                                                <constraint firstItem="pIa-18-LpK" firstAttribute="top" secondItem="Hvb-0a-JE0" secondAttribute="bottom" constant="7.9999999999999574" id="zgQ-Ce-f0o"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="nameLB" destination="Hvb-0a-JE0" id="jCk-bZ-WgK"/>
                                             <outlet property="nickLB" destination="pIa-18-LpK" id="Y5Q-Ht-xkf"/>
@@ -588,7 +588,7 @@
                                 </prototypes>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oI5-ta-w3W">
-                                <rect key="frame" x="0.0" y="706" width="375" height="72"/>
+                                <rect key="frame" x="0.0" y="740" width="375" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="UD6-9O-qDb"/>
                                 </constraints>
@@ -602,7 +602,7 @@
                         <constraints>
                             <constraint firstItem="WBz-0o-bRY" firstAttribute="leading" secondItem="uFm-hP-EK3" secondAttribute="leading" id="1Dj-r0-o6w"/>
                             <constraint firstAttribute="bottom" secondItem="WBz-0o-bRY" secondAttribute="bottom" id="4gz-CS-z1s"/>
-                            <constraint firstItem="oI5-ta-w3W" firstAttribute="bottom" secondItem="uFm-hP-EK3" secondAttribute="bottom" id="81J-9g-mGi"/>
+                            <constraint firstItem="oI5-ta-w3W" firstAttribute="bottom" secondItem="uFm-hP-EK3" secondAttribute="bottom" constant="34" id="81J-9g-mGi"/>
                             <constraint firstItem="uFm-hP-EK3" firstAttribute="trailing" secondItem="ZEo-hB-ElA" secondAttribute="trailing" constant="25" id="9Bt-9T-KRW"/>
                             <constraint firstItem="WBz-0o-bRY" firstAttribute="top" secondItem="0mM-8l-9l1" secondAttribute="top" id="9zE-de-SLK"/>
                             <constraint firstItem="XP6-DW-dx4" firstAttribute="leading" secondItem="uFm-hP-EK3" secondAttribute="leading" constant="10" id="GWO-5d-Ewm"/>
@@ -617,7 +617,7 @@
                             <constraint firstItem="uFm-hP-EK3" firstAttribute="trailing" secondItem="XgA-jC-biw" secondAttribute="trailing" constant="20" id="WEC-fc-qcy"/>
                             <constraint firstItem="tqo-xe-gVv" firstAttribute="top" secondItem="uFm-hP-EK3" secondAttribute="top" constant="17" id="aHH-hN-hPh"/>
                             <constraint firstItem="H4A-mE-ouh" firstAttribute="leading" secondItem="uFm-hP-EK3" secondAttribute="leading" constant="20" id="ii3-K7-vQH"/>
-                            <constraint firstItem="oI5-ta-w3W" firstAttribute="top" secondItem="ZEo-hB-ElA" secondAttribute="bottom" constant="2" id="jD0-9e-R4k"/>
+                            <constraint firstItem="oI5-ta-w3W" firstAttribute="top" secondItem="ZEo-hB-ElA" secondAttribute="bottom" constant="-13" id="jD0-9e-R4k"/>
                             <constraint firstItem="XgA-jC-biw" firstAttribute="centerY" secondItem="H4A-mE-ouh" secondAttribute="centerY" id="oeV-cM-OBK"/>
                             <constraint firstItem="XgA-jC-biw" firstAttribute="height" secondItem="H4A-mE-ouh" secondAttribute="height" id="oqs-7M-xSJ"/>
                             <constraint firstItem="oI5-ta-w3W" firstAttribute="trailing" secondItem="uFm-hP-EK3" secondAttribute="trailing" id="sPn-Hn-b3w"/>
@@ -633,10 +633,10 @@
             </objects>
             <point key="canvasLocation" x="2168.8000000000002" y="-538.66995073891633"/>
         </scene>
-        <!--inicio-->
+        <!--Inicio-->
         <scene sceneID="IRw-7p-wZZ">
             <objects>
-                <viewController storyboardIdentifier="Inicioid" title="inicio" modalPresentationStyle="fullScreen" id="BJi-YQ-ELH" customClass="InicioController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Inicioid" title="Inicio" modalPresentationStyle="fullScreen" id="BJi-YQ-ELH" customClass="InicioController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cs5-TX-1Um">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -654,10 +654,10 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-gq-Lu8">
-                                <rect key="frame" x="20" y="153" width="335" height="555"/>
+                                <rect key="frame" x="20" y="153" width="335" height="601"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="555" id="Q5G-gK-LVP"/>
+                                    <constraint firstAttribute="height" constant="601" id="Q5G-gK-LVP"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NrN-RB-Q0B">
                                     <size key="itemSize" width="374" height="496"/>
@@ -890,7 +890,7 @@
                                 </cells>
                             </collectionView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Nd-BW-KHI">
-                                <rect key="frame" x="0.0" y="708" width="375" height="72"/>
+                                <rect key="frame" x="0.0" y="740" width="375" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="QvH-zt-v0F"/>
                                     <constraint firstAttribute="width" constant="375" id="zzq-NW-bLF"/>
@@ -907,13 +907,13 @@
                             <constraint firstAttribute="bottom" secondItem="vaj-kM-naB" secondAttribute="bottom" id="Ay4-KY-yLr"/>
                             <constraint firstItem="PPY-gq-Lu8" firstAttribute="top" secondItem="jNw-hJ-QNa" secondAttribute="bottom" constant="29" id="BJe-DI-bbP"/>
                             <constraint firstItem="vaj-kM-naB" firstAttribute="trailing" secondItem="aCz-S3-ugV" secondAttribute="trailing" id="E0t-Gm-fWH"/>
-                            <constraint firstItem="0Nd-BW-KHI" firstAttribute="bottom" secondItem="aCz-S3-ugV" secondAttribute="bottom" constant="2" id="GLP-ne-mQ0"/>
+                            <constraint firstItem="0Nd-BW-KHI" firstAttribute="bottom" secondItem="aCz-S3-ugV" secondAttribute="bottom" constant="34" id="GLP-ne-mQ0"/>
                             <constraint firstItem="PPY-gq-Lu8" firstAttribute="leading" secondItem="aCz-S3-ugV" secondAttribute="leading" constant="20" id="KfM-HL-wBd"/>
                             <constraint firstItem="0Nd-BW-KHI" firstAttribute="leading" secondItem="aCz-S3-ugV" secondAttribute="leading" id="iQl-v0-WhY"/>
                             <constraint firstItem="vaj-kM-naB" firstAttribute="leading" secondItem="aCz-S3-ugV" secondAttribute="leading" id="j3z-ql-CrN"/>
                             <constraint firstItem="vaj-kM-naB" firstAttribute="top" secondItem="cs5-TX-1Um" secondAttribute="top" id="kqs-8y-KV8"/>
                             <constraint firstItem="jNw-hJ-QNa" firstAttribute="centerX" secondItem="cs5-TX-1Um" secondAttribute="centerX" id="mf6-3b-Ogt"/>
-                            <constraint firstItem="0Nd-BW-KHI" firstAttribute="top" secondItem="PPY-gq-Lu8" secondAttribute="bottom" id="neE-hn-QCt"/>
+                            <constraint firstItem="0Nd-BW-KHI" firstAttribute="top" secondItem="PPY-gq-Lu8" secondAttribute="bottom" constant="-14" id="neE-hn-QCt"/>
                             <constraint firstItem="0Nd-BW-KHI" firstAttribute="trailing" secondItem="aCz-S3-ugV" secondAttribute="trailing" id="pzD-hb-Saa"/>
                             <constraint firstItem="aCz-S3-ugV" firstAttribute="trailing" secondItem="PPY-gq-Lu8" secondAttribute="trailing" constant="20" id="whI-mk-WXe"/>
                         </constraints>
@@ -923,10 +923,10 @@
             </objects>
             <point key="canvasLocation" x="2860" y="-538.66995073891633"/>
         </scene>
-        <!--notificaciones-->
+        <!--Notificaciones-->
         <scene sceneID="Aa1-Gq-44g">
             <objects>
-                <viewController storyboardIdentifier="Notificationid" title="notificaciones" modalPresentationStyle="fullScreen" id="vzW-z1-TGP" customClass="NotificacionesController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Notificationid" title="Notificaciones" modalPresentationStyle="fullScreen" id="vzW-z1-TGP" customClass="NotificacionesController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q50-eP-5Cg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -950,10 +950,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-bc-NJV">
-                                <rect key="frame" x="20" y="139" width="335" height="565"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="20" y="139" width="335" height="618"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="565" id="QP8-3i-6CW"/>
+                                    <constraint firstAttribute="height" constant="618" id="QP8-3i-6CW"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notifCell" rowHeight="92" id="tuK-cE-v5A" customClass="NotifTableViewCell" customModule="ThunderSound" customModuleProvider="target">
@@ -966,7 +966,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto de la notificacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8t-3Y-9Ul">
                                                     <rect key="frame" x="73" y="35" width="148" height="21"/>
                                                     <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="arJ-7g-1dO">
@@ -995,7 +995,7 @@
                                                 <constraint firstItem="RU8-mP-6Kj" firstAttribute="top" secondItem="FE9-s5-ukq" secondAttribute="top" constant="19" id="yhx-SQ-cMJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="0.80220405629139069" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="iconNotifIMG" destination="RU8-mP-6Kj" id="fEx-GZ-7B9"/>
                                             <outlet property="textoNotifTV" destination="f8t-3Y-9Ul" id="uwX-bB-1sP"/>
@@ -1005,7 +1005,7 @@
                                 </prototypes>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H60-6E-wk0">
-                                <rect key="frame" x="0.0" y="708" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="742" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Eh5-7v-guV"/>
                                 </constraints>
@@ -1024,9 +1024,9 @@
                             <constraint firstItem="sIl-y7-uMW" firstAttribute="trailing" secondItem="IE1-UI-hrh" secondAttribute="trailing" id="Odm-EC-Gp0"/>
                             <constraint firstItem="H60-6E-wk0" firstAttribute="trailing" secondItem="IE1-UI-hrh" secondAttribute="trailing" id="TJq-mi-RZ3"/>
                             <constraint firstItem="Pma-2e-ESo" firstAttribute="leading" secondItem="Nzp-6X-zgY" secondAttribute="trailing" constant="8" symbolic="YES" id="V3g-He-dBJ"/>
-                            <constraint firstItem="H60-6E-wk0" firstAttribute="bottom" secondItem="IE1-UI-hrh" secondAttribute="bottom" id="b06-qJ-iSy"/>
+                            <constraint firstItem="H60-6E-wk0" firstAttribute="bottom" secondItem="IE1-UI-hrh" secondAttribute="bottom" constant="34" id="b06-qJ-iSy"/>
                             <constraint firstItem="ObL-bc-NJV" firstAttribute="top" secondItem="Nzp-6X-zgY" secondAttribute="bottom" constant="35" id="caL-XM-sxo"/>
-                            <constraint firstItem="H60-6E-wk0" firstAttribute="top" secondItem="ObL-bc-NJV" secondAttribute="bottom" constant="4" id="eQh-wC-Woo"/>
+                            <constraint firstItem="H60-6E-wk0" firstAttribute="top" secondItem="ObL-bc-NJV" secondAttribute="bottom" constant="-15" id="eQh-wC-Woo"/>
                             <constraint firstAttribute="bottom" secondItem="sIl-y7-uMW" secondAttribute="bottom" id="h9z-cq-xua"/>
                             <constraint firstItem="Pma-2e-ESo" firstAttribute="top" secondItem="IE1-UI-hrh" secondAttribute="top" constant="17" id="oSG-xN-JjH"/>
                             <constraint firstItem="ObL-bc-NJV" firstAttribute="leading" secondItem="IE1-UI-hrh" secondAttribute="leading" constant="20" id="xrd-M3-5cC"/>
@@ -1042,10 +1042,10 @@
             </objects>
             <point key="canvasLocation" x="3557.5999999999999" y="-538.66995073891633"/>
         </scene>
-        <!--seguir perfil-->
+        <!--Seguir Perfil-->
         <scene sceneID="6gU-l3-QTZ">
             <objects>
-                <viewController title="seguir perfil" id="aRG-sN-Sqc" customClass="SeguirController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Seguir Perfil" id="aRG-sN-Sqc" customClass="SeguirController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nkr-Xf-RyQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1118,10 +1118,10 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tsl-Vy-XJQ">
-                                <rect key="frame" x="20" y="401" width="335" height="304"/>
+                                <rect key="frame" x="20" y="401" width="335" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="0.051997102650000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="304" id="GK9-Nh-lt7"/>
+                                    <constraint firstAttribute="height" constant="357" id="GK9-Nh-lt7"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="btH-iP-IlQ">
                                     <size key="itemSize" width="124" height="156"/>
@@ -1201,7 +1201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yw-Pg-OMq">
-                                <rect key="frame" x="0.0" y="707" width="375" height="71"/>
+                                <rect key="frame" x="0.0" y="741" width="375" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="CoM-tU-djP"/>
                                     <constraint firstAttribute="height" constant="71" id="puN-cY-aZa"/>
@@ -1219,11 +1219,11 @@
                             <constraint firstItem="iYd-0Q-rda" firstAttribute="leading" secondItem="VlG-ZE-Ol2" secondAttribute="trailing" constant="9" id="5Lk-f5-Qor"/>
                             <constraint firstItem="gcO-F4-LvQ" firstAttribute="top" secondItem="uYT-YG-Ke0" secondAttribute="top" id="5dm-PE-bmM"/>
                             <constraint firstItem="kfM-n0-Azx" firstAttribute="top" secondItem="uYT-YG-Ke0" secondAttribute="top" constant="17" id="8E6-Nf-TWs"/>
-                            <constraint firstItem="3Yw-Pg-OMq" firstAttribute="top" secondItem="Tsl-Vy-XJQ" secondAttribute="bottom" constant="2" id="9T4-U0-yBM"/>
+                            <constraint firstItem="3Yw-Pg-OMq" firstAttribute="top" secondItem="Tsl-Vy-XJQ" secondAttribute="bottom" constant="-17" id="9T4-U0-yBM"/>
                             <constraint firstItem="VlG-ZE-Ol2" firstAttribute="top" secondItem="Z1e-uW-vSt" secondAttribute="bottom" constant="23" id="APN-Lg-HPB"/>
                             <constraint firstItem="uYT-YG-Ke0" firstAttribute="trailing" secondItem="Tsl-Vy-XJQ" secondAttribute="trailing" constant="20" id="CLy-q6-Tqj"/>
                             <constraint firstItem="wmE-g7-W0P" firstAttribute="top" secondItem="uIr-WJ-62R" secondAttribute="bottom" constant="14.5" id="Cxd-z6-dg5"/>
-                            <constraint firstItem="3Yw-Pg-OMq" firstAttribute="bottom" secondItem="uYT-YG-Ke0" secondAttribute="bottom" id="DUP-Yc-ekf"/>
+                            <constraint firstItem="3Yw-Pg-OMq" firstAttribute="bottom" secondItem="uYT-YG-Ke0" secondAttribute="bottom" constant="34" id="DUP-Yc-ekf"/>
                             <constraint firstItem="wkV-b5-bN9" firstAttribute="leading" secondItem="iYd-0Q-rda" secondAttribute="trailing" id="J3V-7N-Kxs"/>
                             <constraint firstItem="B5r-n2-E0b" firstAttribute="top" secondItem="nkr-Xf-RyQ" secondAttribute="top" id="JlW-55-EtM"/>
                             <constraint firstItem="B5r-n2-E0b" firstAttribute="leading" secondItem="uYT-YG-Ke0" secondAttribute="leading" id="Kjg-zp-3Xg"/>
@@ -1267,10 +1267,10 @@
             </objects>
             <point key="canvasLocation" x="4930.3999999999996" y="-539.40886699507394"/>
         </scene>
-        <!--buscar cancion-->
+        <!--Buscar Canción-->
         <scene sceneID="umV-tv-Xwy">
             <objects>
-                <viewController storyboardIdentifier="SearchSongid" title="buscar cancion" modalPresentationStyle="fullScreen" id="7Ul-yw-Q2u" customClass="SearchPostController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchSongid" title="Buscar Canción" modalPresentationStyle="fullScreen" id="7Ul-yw-Q2u" customClass="SearchPostController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cs2-00-o9P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1370,10 +1370,10 @@
             </objects>
             <point key="canvasLocation" x="2168.8000000000002" y="-1216.2561576354681"/>
         </scene>
-        <!--crear publicacion-->
+        <!--Crear Publicación-->
         <scene sceneID="TAr-UM-3bL">
             <objects>
-                <viewController storyboardIdentifier="CreatePostid" title="crear publicacion" modalPresentationStyle="fullScreen" id="lxW-f1-c6I" customClass="AlertController" customModule="ThunderSound" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatePostid" title="Crear Publicación" modalPresentationStyle="fullScreen" id="lxW-f1-c6I" customClass="AlertController" customModule="ThunderSound" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2XC-8O-79a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1519,10 +1519,10 @@
             </objects>
             <point key="canvasLocation" x="1369" y="-1216"/>
         </scene>
-        <!--perfil-->
+        <!--Perfil-->
         <scene sceneID="HQT-jt-D8h">
             <objects>
-                <viewController storyboardIdentifier="Profileid" title="perfil" modalPresentationStyle="fullScreen" id="vmK-1x-9Sm" customClass="PerfilController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profileid" title="Perfil" modalPresentationStyle="fullScreen" id="vmK-1x-9Sm" customClass="PerfilController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="juU-fC-0ia">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1585,10 +1585,10 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-QB-jsn">
-                                <rect key="frame" x="20" y="403" width="335" height="303"/>
+                                <rect key="frame" x="20" y="403" width="335" height="352"/>
                                 <color key="backgroundColor" white="1" alpha="0.051997102650000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="303" id="0fD-HN-LWN"/>
+                                    <constraint firstAttribute="height" constant="352" id="0fD-HN-LWN"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rba-yc-IW2">
                                     <size key="itemSize" width="124" height="156"/>
@@ -1680,15 +1680,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPs-SU-PM4">
-                                <rect key="frame" x="0.0" y="708" width="375" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Bem-eE-WPO"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="RYd-Hx-tGu" kind="embed" id="y4H-WV-uOp"/>
-                                </connections>
-                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jc-qN-QMJ">
                                 <rect key="frame" x="279" y="58" width="71" height="29"/>
                                 <constraints>
@@ -1702,6 +1693,15 @@
                                     <action selector="logoutBTp:" destination="vmK-1x-9Sm" eventType="touchUpInside" id="Lpv-yQ-55l"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPs-SU-PM4">
+                                <rect key="frame" x="0.0" y="742" width="375" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Bem-eE-WPO"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="RYd-Hx-tGu" kind="embed" id="y4H-WV-uOp"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jg8-pr-4Br"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1728,7 +1728,7 @@
                             <constraint firstItem="EES-2g-xdp" firstAttribute="top" secondItem="L1l-mJ-6IG" secondAttribute="bottom" constant="34.5" id="Ru3-Ef-McH"/>
                             <constraint firstItem="tES-PP-ONg" firstAttribute="leading" secondItem="jg8-pr-4Br" secondAttribute="leading" constant="25" id="SGp-d2-GnU"/>
                             <constraint firstItem="jZS-fA-V2j" firstAttribute="top" secondItem="tES-PP-ONg" secondAttribute="bottom" constant="18" id="WDt-fy-bwd"/>
-                            <constraint firstItem="BPs-SU-PM4" firstAttribute="bottom" secondItem="jg8-pr-4Br" secondAttribute="bottom" id="WPQ-D6-tr5"/>
+                            <constraint firstItem="BPs-SU-PM4" firstAttribute="bottom" secondItem="jg8-pr-4Br" secondAttribute="bottom" constant="34" id="WPQ-D6-tr5"/>
                             <constraint firstItem="Igc-ae-NY1" firstAttribute="top" secondItem="21m-xp-3Mb" secondAttribute="bottom" constant="14.5" id="aST-yv-42C"/>
                             <constraint firstItem="1mQ-jS-6Pt" firstAttribute="top" secondItem="juU-fC-0ia" secondAttribute="top" id="ab8-xd-QOl"/>
                             <constraint firstItem="vvv-ez-K6Y" firstAttribute="top" secondItem="EES-2g-xdp" secondAttribute="bottom" constant="8" symbolic="YES" id="ach-yE-HLl"/>
@@ -1737,7 +1737,7 @@
                             <constraint firstItem="jZS-fA-V2j" firstAttribute="leading" secondItem="jg8-pr-4Br" secondAttribute="leading" constant="48" id="iKQ-0x-5Tu"/>
                             <constraint firstItem="vGF-TI-fW6" firstAttribute="top" secondItem="jg8-pr-4Br" secondAttribute="top" constant="17" id="ibK-bN-Efw"/>
                             <constraint firstItem="jg8-pr-4Br" firstAttribute="trailing" secondItem="KKt-QB-jsn" secondAttribute="trailing" constant="20" id="j0q-0X-8SA"/>
-                            <constraint firstItem="BPs-SU-PM4" firstAttribute="top" secondItem="KKt-QB-jsn" secondAttribute="bottom" constant="2" id="jyM-5l-6yE"/>
+                            <constraint firstItem="BPs-SU-PM4" firstAttribute="top" secondItem="KKt-QB-jsn" secondAttribute="bottom" constant="-13" id="jyM-5l-6yE"/>
                             <constraint firstItem="jg8-pr-4Br" firstAttribute="trailing" secondItem="Igc-ae-NY1" secondAttribute="trailing" constant="9" id="mxI-jX-TGf"/>
                             <constraint firstItem="xpG-jH-5hb" firstAttribute="leading" secondItem="vvv-ez-K6Y" secondAttribute="trailing" id="oko-vi-rqS"/>
                             <constraint firstItem="tES-PP-ONg" firstAttribute="top" secondItem="L1l-mJ-6IG" secondAttribute="bottom" constant="23" id="pK7-Yd-3NH"/>
@@ -1761,18 +1761,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SbL-VY-dZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4244" y="-539"/>
+            <point key="canvasLocation" x="4244" y="-539.40886699507394"/>
         </scene>
         <!--Navegation Controller-->
         <scene sceneID="D48-li-ExL">
             <objects>
                 <viewController id="RYd-Hx-tGu" customClass="NavegationController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO0-xd-Bri">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN7-PZ-nCH">
-                                <rect key="frame" x="0.0" y="16" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="17" width="375" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o17-y7-ckV">
                                         <rect key="frame" x="8" y="8" width="40" height="38"/>
@@ -1856,10 +1856,10 @@
             </objects>
             <point key="canvasLocation" x="3556" y="-58"/>
         </scene>
-        <!--terminar registro-->
+        <!--Editar Perfil-->
         <scene sceneID="wSo-dk-8Z6">
             <objects>
-                <viewController storyboardIdentifier="Editid" title="terminar registro" id="gk2-Qc-kgZ" customClass="EditProfileController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Editid" title="Editar Perfil" id="gk2-Qc-kgZ" customClass="EditProfileController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dX9-yZ-RpJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2033,7 +2033,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lum-az-ZPa"/>
+        <segue reference="TUX-21-6rN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BuscarBTwhite" width="46.333332061767578" height="41"/>
