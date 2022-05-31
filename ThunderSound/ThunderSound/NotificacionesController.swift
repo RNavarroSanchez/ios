@@ -13,9 +13,11 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad()
     {
+        super.viewDidLoad()
         notificationTV.delegate = self
         notificationTV.dataSource = self
-        super.viewDidLoad()
+        
+        peticionGetNotif(id: self.) // como saco el id del user?
     }
 
     var usuarios: [[String: Any]] = []
