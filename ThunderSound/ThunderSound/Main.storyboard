@@ -1045,7 +1045,7 @@
         <!--Seguir Perfil-->
         <scene sceneID="6gU-l3-QTZ">
             <objects>
-                <viewController title="Seguir Perfil" id="aRG-sN-Sqc" customClass="SeguirController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="suPerfilid" title="Seguir Perfil" id="aRG-sN-Sqc" customClass="SeguirController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nkr-Xf-RyQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1768,11 +1768,11 @@
             <objects>
                 <viewController id="RYd-Hx-tGu" customClass="NavegationController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO0-xd-Bri">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN7-PZ-nCH">
-                                <rect key="frame" x="0.0" y="17" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="15" width="375" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o17-y7-ckV">
                                         <rect key="frame" x="8" y="8" width="40" height="38"/>
@@ -2033,7 +2033,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TUX-21-6rN"/>
+        <segue reference="y4H-WV-uOp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BuscarBTwhite" width="46.333332061767578" height="41"/>

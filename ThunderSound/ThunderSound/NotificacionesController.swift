@@ -17,7 +17,7 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
         notificationTV.delegate = self
         notificationTV.dataSource = self
         
-        peticionGetNotif(id: self.) // como saco el id del user?
+//        peticionGetNotif(id: self.usuarios[indexPath.row]) // como saco el id del user?
     }
 
     var usuarios: [[String: Any]] = []

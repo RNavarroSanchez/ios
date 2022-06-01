@@ -64,6 +64,18 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let id = (usuarios[indexPath.row]["id"] as! Int)
+        let shared = UserDefaults.standard
+        shared.setValue(id, forKey: "id")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "suPerfilid") as! SeguirController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     var mySearch: [String: Any] = [:]
     func peticionSearchUser(searchTF: String)
     {
@@ -113,7 +125,4 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
         }.resume()
     }
-    
-    
-    
 }

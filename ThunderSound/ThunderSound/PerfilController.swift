@@ -9,8 +9,6 @@ import UIKit
 
 class PerfilController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
-    var datos1: Array<String> = []
-    
     @IBOutlet var userNameLBp: UILabel!
     @IBOutlet var myProfileIVp: UIImageView!
     @IBOutlet var followersLBp: UILabel!
@@ -36,12 +34,12 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
         self.present(vc, animated: true, completion: nil)
     }
     @IBOutlet var postCV: UICollectionView!
-    
     var posts: [[String: Any]] = []
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+//        peticionPerfil(id: )
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -63,9 +61,10 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
         return cell
     }
     
-    func peticionPerfil()
+    var datos1: [String: Any] = [:]
+    func peticionPerfil(id: Int)
     {
-        let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/id/canciones"
+        let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)"
         guard let url = URL(string: urlString) else { return }
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -76,7 +75,7 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
             
             if response != nil
             {
-                print(response ?? "No se ha obtenido respuesta")
+                print(response ?? "No se han obtenido respuesta")
             }
 
             guard let data = data else { return }
@@ -84,14 +83,21 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
             do
             {
                 let json = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as! [String:Any]
-                self.datos1 = json["characters"] as! Array<String>
+                self.datos1 = json
                 
-                DispatchQueue.main.async
+                if self.datos1["error"] as? String == nil
                 {
-//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                    let vc = storyboard.instantiateViewController(withIdentifier: "inicio") as! ViewController
-//                    vc.datos1 = self.nCharacters
-//                    self.navigationController?.show(vc, sender: nil)
+                    self.posts = self.datos1["data"] as! [[String: Any]]
+                    DispatchQueue.main.async
+                    {
+                        self.postCV.reloadData()
+                    }
+                } else
+                {
+                    let alert = UIAlertController(title: "No ha sido posible cargar el perfil", message: self.datos1["message"] as? String, preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
+                    alert.addAction(action)
+                    self.present(alert, animated: true)
                 }
             } catch let jsonError { print(jsonError) }
         }.resume()
