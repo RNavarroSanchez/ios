@@ -16,33 +16,41 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         notificationTV.delegate = self
         notificationTV.dataSource = self
-        
-//        peticionGetNotif(id: self.usuarios[indexPath.row]) // como saco el id del user?
+
+        let shared = UserDefaults.standard
+        peticionGetNotif(id: shared.integer(forKey: "id"))
     }
 
-    var usuarios: [[String: Any]] = []
+    var notificaciones: [[String: Any]] = []
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        usuarios.count
+        notificaciones.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notifCell", for: indexPath) as! NotifTableViewCell
-        let url = NSURL(string: usuarios[indexPath.row]["image"] as! String)
+        let url = NSURL(string: notificaciones[indexPath.row]["foto_emisor"] as! String)
         let data = NSData(contentsOf: url! as URL)
         if data != nil
         {
-            cell.iconNotifIMG.image = UIImage(data: data! as Data)
+            cell.userNotifIMG.image = UIImage(data: data! as Data)
         }
-        cell.textoNotifTV.text = (usuarios[indexPath.row]["tipo"] as! String)
-//        if cell.textoNotifTV.text == "COMENTARIO"
-//        {
-//            cell.textoNotifTV.text = (usuarios[indexPath.row]["tipo"] as! String)
-//        }
-        self.view.backgroundColor = UIColor(red: 0.44, green: 0.44, blue: 0.44, alpha: 1.00)
-        
-        
+        cell.textoNotifTV.text = (notificaciones[indexPath.row]["tipo"] as! String)
+        if (notificaciones[indexPath.row]["tipo"] as! String) == "COMENTARIO"
+        {
+            cell.textoNotifTV.text = "Has recibido un comentario de \((notificaciones[indexPath.row]["nick_emisor"] as! String))."
+            cell.iconNotifIMG.image = UIImage(named: "ComentarioPostIcono")
+        } else
+        {
+            cell.textoNotifTV.text = "\((notificaciones[indexPath.row]["nick_emisor"] as! String)) ha comenzado a seguirte."
+            cell.iconNotifIMG.image = UIImage(named: "NotificacionIcono")
+        }
         return cell
     }
     
@@ -50,11 +58,11 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
     func peticionGetNotif(id: Int)
     {
         let shared = UserDefaults.standard
+        let id = shared.integer(forKey: "id")
         let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)/notificaciones")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.setValue("Bearer \(shared.string(forKey: "token")!)", forHTTPHeaderField: "Authorization")
-
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response
@@ -67,11 +75,12 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
-                    
                     self.myNotif = json as! [String: Any]
                     if self.myNotif["error"] as? String == nil
                     {
-                        self.usuarios = self.myNotif["data"] as! [[String: Any]]
+                        let dataG = self.myNotif["data"] as! [String: Any]//Unexpectedly found nil while unwrapping an Optional value
+                        
+                        self.notificaciones = dataG["data"] as! [[String : Any]]
                         DispatchQueue.main.async
                         {
                             self.notificationTV.reloadData()
@@ -90,6 +99,4 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
             }
         }.resume()
     }
-    
-    
 }

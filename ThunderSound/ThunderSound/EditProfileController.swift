@@ -68,7 +68,7 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePicke
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "PUT" //EDITAR
         request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let bodyData = "password=\(passTF)&nick=\(userTF)&descripcion=\(descripcionTF)&foto_url=\(String(describing: imgString))"
+        let bodyData = "password=\(passTF.text!)&nick=\(userTF.text!)&descripcion=\(descripcionTF.text!)&foto_url=\(String(describing: imgString))"  // NO ESTOY SEGURO DEL .text!
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
         
         let session = URLSession.shared
@@ -82,13 +82,12 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePicke
                 do
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    
                     DispatchQueue.main.async
                     {
                         self.myDictionary = json as! [String: Any]
                         print(json)
                         
-                        if self.myDictionary["code"] as! Int == 200
+                        if self.myDictionary["error"] as? String == nil
                         {
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "Profileid") as! PerfilController

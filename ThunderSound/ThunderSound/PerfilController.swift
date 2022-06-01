@@ -39,7 +39,8 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
     override func viewDidLoad()
     {
         super.viewDidLoad()
-//        peticionPerfil(id: )
+        let shared = UserDefaults.standard
+        peticionPerfil(id: shared.integer(forKey: "id"))
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -87,9 +88,10 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
                 
                 if self.datos1["error"] as? String == nil
                 {
-                    self.posts = self.datos1["data"] as! [[String: Any]]
+                    //self.posts = self.datos1["data"] as! [[String : Any]]Could not cast value of type '__NSDictionaryI' (0x101d10660) to 'NSArray' (0x101d106c0).
                     DispatchQueue.main.async
                     {
+//                        self.rellenarDatos()
                         self.postCV.reloadData()
                     }
                 } else
@@ -102,5 +104,15 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
             } catch let jsonError { print(jsonError) }
         }.resume()
     }
+    
+//    func rellenarDatos()
+//    {
+//        userNameLBp.text = (self.datos1["nick"] as! String)
+//        myProfileIVp.image = UIImage(data: self.datos1["foto_url"] as! Data)
+//        followersLBp.text = (self.datos1["numeroseguidores"] as! String)
+//        followLBp.text = (self.datos1["numeroseguidos"] as! String)
+//        postLBp.text = (self.datos1["numeroposts"] as! String)
+//        descriptionLBp.text = (self.datos1["descripcion"] as! String)
+//    }
 
 }

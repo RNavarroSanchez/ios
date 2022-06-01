@@ -10,18 +10,17 @@ import UIKit
 class LoginController: UIViewController
 {
     var myResponse: [String: Any] = [:]
-    
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var rememberLB: UILabel!
-    @IBAction func registerBT(_ sender: Any)//Registro
+    @IBAction func registerBT(_ sender: Any)
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Registerid") as! RegisterController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
-    @IBAction func loginBT(_ sender: Any)//Inicio de Sesión
+    @IBAction func loginBT(_ sender: Any)
     {
         if userTF.text != nil || passwordTF.text != nil
         {
@@ -38,8 +37,7 @@ class LoginController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        var preferences = UserDefaults.standard
-
+        let preferences = UserDefaults.standard
         if let user = preferences.string(forKey: "userTF")
         {
             if let pass = preferences.string(forKey: "passwordTF")
@@ -50,18 +48,16 @@ class LoginController: UIViewController
                 }
             }
         }
-        //tapOlvidar la contraseña
         let tapOlvidar = UITapGestureRecognizer(target: self, action: #selector(self.tapRemember))
         rememberLB.isUserInteractionEnabled = true
         rememberLB.addGestureRecognizer(tapOlvidar)
-        
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
 
     @objc
-    func tapRemember()//OLVIDAR CONTRASEÑA
+    func tapRemember()
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RememberPassid") as! RememberController
@@ -69,7 +65,7 @@ class LoginController: UIViewController
         self.present(vc, animated: true, completion: nil)
     }
     
-    func peticionLogin(userTF: String, passwordTF: String)//Peticion Inicio de Sesión
+    func peticionLogin(userTF: String, passwordTF: String)
     {
         let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/auth/login")
         guard let serviceUrl = URL(string: Url) else { return }
@@ -89,19 +85,16 @@ class LoginController: UIViewController
                 do
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    
                     DispatchQueue.main.async
                     { [self] in
-                        print(json)
-                        
                         self.myResponse = json as! [String: Any]
+                        print(json)
                         if self.myResponse["error"] as? String == "Unauthorized"
                         {
                             let alert = UIAlertController(title: "Error", message: myResponse["message"] as? String, preferredStyle: .alert)
                             let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
                             alert.addAction(action)
                             present(alert, animated: true)
-                            
                         }
                         if self.myResponse["access_token"] != nil
                         {
@@ -109,11 +102,12 @@ class LoginController: UIViewController
                             let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
                             vc.modalPresentationStyle = .fullScreen
                             self.present(vc, animated: true, completion: nil)
-                            
                             let shared = UserDefaults.standard
                             shared.setValue(userTF, forKey: "userTF")
                             shared.setValue(passwordTF, forKey: "passwordTF")
                             shared.setValue(myResponse["access_token"] as! String, forKey: "token")
+                            let id = self.myResponse["id"]
+                            shared.setValue(id, forKey: "id")
                         }
                     }
                 } catch

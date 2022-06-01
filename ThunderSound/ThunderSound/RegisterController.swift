@@ -39,13 +39,10 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     @IBAction func registerBTr(_ sender: Any)
     {
-//        let imgString = self.editarIMG.image
-//        let base64 = imgString?.base64
-//        let rebornImg = base64?.imageFromBase64
         let imgString = editarIMG.image?.pngData()?.base64EncodedString()
         if emailTFr.text != nil && passTFr.text == passx2TFr.text && userTFr.text != nil && nameTFr.text != nil && subnameTFr.text != nil && descripcionTFr.text != nil
         {
-            peticionRegister(emailTFr: emailTFr.text!, passTFr: passTFr.text!, passx2TFr: passx2TFr.text!, userTFr: userTFr.text!, nameTFr: nameTFr.text!, subnameTFr: subnameTFr.text!, descripcionTFr: descripcionTFr.text!, imgString: userTFr.text!)// editarIMG: editarIMG.UIImageView! CAMBIAR EL imgString
+            peticionRegister(emailTFr: emailTFr.text!, passTFr: passTFr.text!, passx2TFr: passx2TFr.text!, userTFr: userTFr.text!, nameTFr: nameTFr.text!, subnameTFr: subnameTFr.text!, descripcionTFr: descripcionTFr.text!, imgString: imgString!)// NO ESTOY SEGURO DE LA IMG si esta bien puesta
         } else
         {
             let alert = UIAlertController(title: "Error", message: "No puedes dejar un campo sin rellenar", preferredStyle: .alert)
@@ -62,24 +59,21 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         self.editarIMG.clipsToBounds = true
         self.descripcionTFr.layer.cornerRadius = 10
         self.descripcionTFr.clipsToBounds = true
-
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
         
-    func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, imgString: String)//editarIMG: imagen //Peticion Registrar Usuario
+    func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, imgString: String)
     {
         let imgString = editarIMG.image?.pngData()?.base64EncodedString()
-        print(imgString)
         let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "POST"
         request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let bodyData = "correo=\(emailTFr)&password=\(passTFr)&nick=\(userTFr)&nombre=\(nameTFr)&apellidos=\(subnameTFr)&descripcion=\(descripcionTFr)&foto_url=\(String(describing: imgString))" ///&foto_url=\(editarIMG.image ?? "")
+        let bodyData = "correo=\(emailTFr)&password=\(passTFr)&nick=\(userTFr)&nombre=\(nameTFr)&apellidos=\(subnameTFr)&descripcion=\(descripcionTFr)&foto_url=\(String(describing: imgString))"
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
-
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response
@@ -91,13 +85,10 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                 do
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    
                     DispatchQueue.main.async
                     {
                         self.myDictionary = json as! [String: Any]
-                        print(json)
-                        
-                        if self.myDictionary["code"] as! Int == 200
+                        if self.myDictionary["error"] as? String == nil
                         {
                             let alert = UIAlertController(title: "LLego el momento...", message: "Registro completado con éxito", preferredStyle: .alert)
                             let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
@@ -108,7 +99,6 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                             let vc = storyboard.instantiateViewController(withIdentifier: "Loginid") as! LoginController
                             vc.modalPresentationStyle = .fullScreen
                             self.present(vc, animated: true, completion: nil)
-                            
                         } else
                         {
                             let alert = UIAlertController(title: "Error != 200", message: self.myDictionary["message"] as? String, preferredStyle: .alert)
@@ -155,24 +145,3 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         picker.dismiss(animated: true, completion: nil)
     }
 }
-
-//extension UIImage
-//{
-//    var base64: String?
-//    {
-//        self.jpegData(compressionQuality: 1)?.base64EncodedString()
-//    }
-//}
-//
-//extension String
-//{
-//    var imageFromBase64: UIImage?
-//    {
-//        guard let imageData = Data(base64Encoded: self, options: .ignoreUnknownCharacters) else
-//        {
-//            return nil
-//        }
-//        return UIImage(data: imageData)
-//    }
-//}
-

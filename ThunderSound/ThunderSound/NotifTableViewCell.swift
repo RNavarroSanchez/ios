@@ -16,10 +16,7 @@ class NotifTableViewCell: UITableViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        
-        self.iconNotifIMG.layer.cornerRadius = 40 //Comprobar si quedan bien estos valores
-        self.iconNotifIMG.clipsToBounds = true
-        self.userNotifIMG.layer.cornerRadius = 40
+        self.userNotifIMG.layer.cornerRadius = 46
         self.userNotifIMG.clipsToBounds = true
     }
 
