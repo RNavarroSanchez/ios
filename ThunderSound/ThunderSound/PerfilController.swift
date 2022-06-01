@@ -58,7 +58,6 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
             cell.postIMG.image = UIImage(data: data! as Data)
         }
         cell.postNameLB.text = (posts[indexPath.row]["titulo"] as! String)
-        
         return cell
     }
     
@@ -67,31 +66,29 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
     {
         let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)"
         guard let url = URL(string: urlString) else { return }
-
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil
             {
                 print(error!.localizedDescription)
             }
-            
             if response != nil
             {
                 print(response ?? "No se han obtenido respuesta")
             }
-
             guard let data = data else { return }
-
             do
             {
                 let json = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as! [String:Any]
                 self.datos1 = json
-                
                 if self.datos1["error"] as? String == nil
                 {
-                    //self.posts = self.datos1["data"] as! [[String : Any]]Could not cast value of type '__NSDictionaryI' (0x101d10660) to 'NSArray' (0x101d106c0).
+//                    let dataG = self.datos1["data"] as! [String: Any]
+//                    self.posts = dataG["data"] as! [[String : Any]]
+                    
+                    self.posts = self.datos1["data"] as! [[String : Any]]//Could not cast value of type '__NSDictionaryI' (0x101d10660) to 'NSArray' (0x101d106c0).
                     DispatchQueue.main.async
                     {
-//                        self.rellenarDatos()
+                        self.rellenarDatos()
                         self.postCV.reloadData()
                     }
                 } else
@@ -105,14 +102,13 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
         }.resume()
     }
     
-//    func rellenarDatos()
-//    {
-//        userNameLBp.text = (self.datos1["nick"] as! String)
-//        myProfileIVp.image = UIImage(data: self.datos1["foto_url"] as! Data)
-//        followersLBp.text = (self.datos1["numeroseguidores"] as! String)
-//        followLBp.text = (self.datos1["numeroseguidos"] as! String)
-//        postLBp.text = (self.datos1["numeroposts"] as! String)
-//        descriptionLBp.text = (self.datos1["descripcion"] as! String)
-//    }
-
+    func rellenarDatos()
+    {
+        userNameLBp.text = (self.datos1["nick"] as! String)
+        myProfileIVp.image = UIImage(data: self.datos1["foto_url"] as! Data)
+        followersLBp.text = (self.datos1["numeroseguidores"] as! String)
+        followLBp.text = (self.datos1["numeroseguidos"] as! String)
+        postLBp.text = (self.datos1["numeroposts"] as! String)
+        descriptionLBp.text = (self.datos1["descripcion"] as! String)
+    }
 }

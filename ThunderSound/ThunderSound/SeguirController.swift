@@ -50,20 +50,16 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
     {
         let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)"
         guard let url = URL(string: urlString) else { return }
-
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil
             {
                 print(error!.localizedDescription)
             }
-            
             if response != nil
             {
                 print(response ?? "No se han obtenido respuesta")
             }
-
             guard let data = data else { return }
-
             do
             {
                 let json = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as! [String:Any]
@@ -71,7 +67,11 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
                 
                 if self.datos1["error"] as? String == nil
                 {
+//                    let dataG = self.datos1["data"] as! [String: Any]
+//                    self.posts = dataG["data"] as! [[String : Any]]
+                    
                     self.posts = self.datos1["data"] as! [[String : Any]]//Could not cast value of type '__NSDictionaryI' (0x101d10660) to 'NSArray' (0x101d106c0).
+                    
                     DispatchQueue.main.async
                     {
                         self.rellenarDatos()
