@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atO-Q5-ROL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XEx-9N-ExH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1320,12 +1320,15 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="searchBT:" destination="7Ul-yw-Q2u" eventType="touchUpInside" id="iuL-wp-oDa"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SSI-Rq-m3Z">
                                 <rect key="frame" x="25" y="168" width="325" height="545"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="176" id="dIe-Sb-VIG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="176" id="dIe-Sb-VIG" customClass="SearchPostTableViewCell" customModule="ThunderSound" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="325" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIe-Sb-VIG" id="xYJ-Sr-yTk">
@@ -1350,6 +1353,9 @@
                                                 <constraint firstItem="Miq-Sf-KLV" firstAttribute="centerX" secondItem="xYJ-Sr-yTk" secondAttribute="centerX" id="m93-EU-OPh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="spotifyWebView" destination="Miq-Sf-KLV" id="feX-9h-CWK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1378,7 +1384,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchTF" destination="KGc-Xj-v55" id="KZ5-qm-DBP"/>
+                        <outlet property="searchBT" destination="ZIl-jh-gCK" id="QHW-sy-UY5"/>
+                        <outlet property="searchTF" destination="KGc-Xj-v55" id="JfD-Yj-bHu"/>
+                        <outlet property="tableView" destination="SSI-Rq-m3Z" id="ln4-4q-YTF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOf-DP-8Op" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1783,11 +1791,11 @@
             <objects>
                 <viewController id="RYd-Hx-tGu" customClass="NavegationController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO0-xd-Bri">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN7-PZ-nCH">
-                                <rect key="frame" x="0.0" y="15" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="17" width="375" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o17-y7-ckV">
                                         <rect key="frame" x="8" y="8" width="40" height="38"/>
@@ -2048,7 +2056,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T2c-hs-Z9X"/>
+        <segue reference="TUX-21-6rN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BuscarBTwhite" width="46.333332061767578" height="41"/>
