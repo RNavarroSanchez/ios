@@ -36,6 +36,7 @@
 		A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434827D65770005A9141 /* AppDelegate.swift */; };
 		A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434A27D65770005A9141 /* SceneDelegate.swift */; };
 		A9B4435227D65771005A9141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B4435127D65771005A9141 /* Assets.xcassets */; };
+		A9BF18832849167000042969 /* ThunderSound in Resources */ = {isa = PBXBuildFile; fileRef = A9BF18822849167000042969 /* ThunderSound */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		A9B4434A27D65770005A9141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A9B4435127D65771005A9141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9B4435627D65771005A9141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9BF18822849167000042969 /* ThunderSound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ThunderSound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		A9B4434727D65770005A9141 /* ThunderSound */ = {
 			isa = PBXGroup;
 			children = (
+				A9BF18822849167000042969 /* ThunderSound */,
 				A94195E927EB92330006E2CD /* LoginController.swift */,
 				A94ABF0F281B03D3000D3794 /* RememberController.swift */,
 				A94195EB27EB923D0006E2CD /* RegisterController.swift */,
@@ -209,6 +212,7 @@
 				A9B4435227D65771005A9141 /* Assets.xcassets in Resources */,
 				A940140227DA50BA0087C6E6 /* PTSans-Bold.ttf in Resources */,
 				A96C236127E252BB00CE771A /* Launch Screen.storyboard in Resources */,
+				A9BF18832849167000042969 /* ThunderSound in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -353,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

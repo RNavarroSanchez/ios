@@ -16,9 +16,9 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         notificationTV.delegate = self
         notificationTV.dataSource = self
-
         let shared = UserDefaults.standard
-        peticionGetNotif(id: shared.integer(forKey: "id"))
+        let id = shared.integer(forKey: "id")
+        peticionGetNotif(id: id)
     }
 
     var notificaciones: [[String: Any]] = []

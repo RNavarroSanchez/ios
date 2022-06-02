@@ -37,10 +37,13 @@ class LoginController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        let preferences = UserDefaults.standard
-        if let user = preferences.string(forKey: "userTF")
+        let shared = UserDefaults.standard
+        shared.setValue("", forKey: "userTF")
+        shared.setValue("", forKey: "passwordTF")
+        shared.setValue("", forKey: "token")
+        if let user = shared.string(forKey: "userTF")
         {
-            if let pass = preferences.string(forKey: "passwordTF")
+            if let pass = shared.string(forKey: "passwordTF")
             {
                 if user != "" && pass != ""
                 {
@@ -48,6 +51,7 @@ class LoginController: UIViewController
                 }
             }
         }
+
         let tapOlvidar = UITapGestureRecognizer(target: self, action: #selector(self.tapRemember))
         rememberLB.isUserInteractionEnabled = true
         rememberLB.addGestureRecognizer(tapOlvidar)

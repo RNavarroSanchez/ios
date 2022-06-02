@@ -38,7 +38,9 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePicke
         let imgString = editarIMG.image?.pngData()?.base64EncodedString()
         if passTF.text == passx2TF.text || userTF.text != nil || descripcionTF.text != nil || imgString?.isEmpty == false
         {
-            peticionEditarPerfil()
+            let shared = UserDefaults.standard
+            let id = shared.integer(forKey: "id")
+            peticionEditarPerfil(id: id)
         } else
         {
             let alert = UIAlertController(title: "Error", message: "No puedes dejar ningun campo sin rellenar", preferredStyle: .alert)
@@ -60,10 +62,10 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePicke
         view.addGestureRecognizer(tap)
     }
     
-    func peticionEditarPerfil()
+    func peticionEditarPerfil(id: Int)
     {
         let imgString = editarIMG.image?.pngData()?.base64EncodedString()
-        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
+        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)/canciones")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "PUT" //EDITAR

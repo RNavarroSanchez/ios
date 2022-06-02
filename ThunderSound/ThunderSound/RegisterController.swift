@@ -66,7 +66,9 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
     func peticionRegister(emailTFr: String, passTFr: String, passx2TFr: String, userTFr: String, nameTFr: String, subnameTFr: String, descripcionTFr: String, imgString: String)
     {
-        let imgString = editarIMG.image?.pngData()?.base64EncodedString()
+        let imgString1 = editarIMG.image?.pngData()?.base64EncodedString()
+        let imgString = "data:image/jpg;base64,\(String(describing: imgString1))"
+//        print(imgString)
         let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
@@ -90,10 +92,10 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                         self.myDictionary = json as! [String: Any]
                         if self.myDictionary["error"] as? String == nil
                         {
-                            let alert = UIAlertController(title: "LLego el momento...", message: "Registro completado con éxito", preferredStyle: .alert)
-                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
-                            alert.addAction(action)
-                            self.present(alert, animated: true, completion: nil)
+//                            let alert = UIAlertController(title: "LLego el momento...", message: "Registro completado con éxito", preferredStyle: .alert)
+//                            let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
+//                            alert.addAction(action)
+//                            self.present(alert, animated: true, completion: nil)
                             
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "Loginid") as! LoginController
