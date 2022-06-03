@@ -45,7 +45,7 @@ class NavegationController: UIViewController
     @IBAction func goCreatePost(_ sender: Any)
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CreateSongid") as! AlertController
+        let vc = storyboard.instantiateViewController(withIdentifier: "CreateSongid") as! SearchPostController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

@@ -31,14 +31,12 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         let path = UIBezierPath(roundedRect:searchEditBT.bounds,
                                 byRoundingCorners:[.topRight, .bottomRight],
                                 cornerRadii: CGSize(width: 6, height:  6))
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
         searchEditBT.layer.mask = maskLayer
-        
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
@@ -100,10 +98,7 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 do
                 {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    
                     self.mySearch = json as! [String: Any]
-                    print(json)
-                    
                     if self.mySearch["error"] as? String == nil
                     {
                         self.usuarios = self.mySearch["data"] as! [[String: Any]]

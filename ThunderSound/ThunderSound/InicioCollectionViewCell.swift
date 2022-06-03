@@ -16,7 +16,6 @@ class InicioCollectionViewCell: UICollectionViewCell
     @IBOutlet var dateLB: UILabel!
     @IBOutlet var phraseLB: UILabel!
     @IBOutlet var comentariosTotalesBT: UIButton!
-    @IBOutlet var likeTotalesBT: UIButton!
     @IBOutlet var comentariosView: UIView!
     @IBOutlet var miComentarioIV: UIImageView!
     @IBOutlet var miComentarioNewTF: UITextField!
