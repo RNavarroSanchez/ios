@@ -84,10 +84,7 @@ class SearchPostController: UIViewController, UITableViewDelegate, UITableViewDa
         request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
-            if let response = response
-            {
-                print(response)
-            }
+            if let response = response{print(response)}
             if let data = data
             {
                 do

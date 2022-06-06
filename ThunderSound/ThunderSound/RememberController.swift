@@ -46,10 +46,7 @@ class RememberController: UIViewController
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
-            if let response = response
-            {
-                print(response)
-            }
+            if let response = response{print(response)}
             if let data = data
             {
                 do
