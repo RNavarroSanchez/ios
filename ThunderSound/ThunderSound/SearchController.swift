@@ -67,7 +67,6 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
         let id = (usuarios[indexPath.row]["id"] as! Int)
         let shared = UserDefaults.standard
         shared.setValue(id, forKey: "id")
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "suPerfilid") as! SeguirController
         vc.modalPresentationStyle = .fullScreen
@@ -86,7 +85,6 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
         let bodyData = "nick=\(searchTF)"
         request.setValue("Bearer \(shared.string(forKey: "token")!)", forHTTPHeaderField: "Authorization")
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
-
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response

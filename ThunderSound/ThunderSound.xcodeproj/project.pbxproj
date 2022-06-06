@@ -31,9 +31,9 @@
 		A95364E628451DDB0067BA78 /* PerfilCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95364E528451DDB0067BA78 /* PerfilCollectionViewCell.swift */; };
 		A9557ECE27FB4BCC000D061C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9557ECD27FB4BCC000D061C /* Main.storyboard */; };
 		A9557ED427FB521C000D061C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557ED327FB521B000D061C /* AlertController.swift */; };
+		A95C3631284E69AF00C064E4 /* VerPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3630284E69AF00C064E4 /* VerPostTableViewCell.swift */; };
 		A96C236127E252BB00CE771A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C236027E252BB00CE771A /* Launch Screen.storyboard */; };
 		A9A0711D2819A04500F67230 /* InicioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0711C2819A04500F67230 /* InicioCollectionViewCell.swift */; };
-		A9A0711F2819A24E00F67230 /* InicioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0711E2819A24E00F67230 /* InicioTableViewCell.swift */; };
 		A9B4434927D65770005A9141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434827D65770005A9141 /* AppDelegate.swift */; };
 		A9B4434B27D65770005A9141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4434A27D65770005A9141 /* SceneDelegate.swift */; };
 		A9B4435227D65771005A9141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B4435127D65771005A9141 /* Assets.xcassets */; };
@@ -65,9 +65,9 @@
 		A95364E528451DDB0067BA78 /* PerfilCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9557ECD27FB4BCC000D061C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ThunderSound/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		A9557ED327FB521B000D061C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		A95C3630284E69AF00C064E4 /* VerPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerPostTableViewCell.swift; sourceTree = "<group>"; };
 		A96C236027E252BB00CE771A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A9A0711C2819A04500F67230 /* InicioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCollectionViewCell.swift; sourceTree = "<group>"; };
-		A9A0711E2819A24E00F67230 /* InicioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioTableViewCell.swift; sourceTree = "<group>"; };
 		A9B4434527D65770005A9141 /* ThunderSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B4434827D65770005A9141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9B4434A27D65770005A9141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 				A94ABF0F281B03D3000D3794 /* RememberController.swift */,
 				A94195EB27EB923D0006E2CD /* RegisterController.swift */,
 				A9A0711C2819A04500F67230 /* InicioCollectionViewCell.swift */,
-				A9A0711E2819A24E00F67230 /* InicioTableViewCell.swift */,
 				A93C5D2C281711830006E18C /* InicioController.swift */,
 				A94E198A284A555D0084A797 /* VerPostViewController.swift */,
+				A95C3630284E69AF00C064E4 /* VerPostTableViewCell.swift */,
 				A94195EF27EB97C60006E2CD /* SearchController.swift */,
 				A94DD393283E91A6007D45AA /* SearchTableViewCell.swift */,
 				A9557ED327FB521B000D061C /* AlertController.swift */,
@@ -226,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9486D43283D2EDD00C7B280 /* SearchPostController.swift in Sources */,
-				A9A0711F2819A24E00F67230 /* InicioTableViewCell.swift in Sources */,
+				A95C3631284E69AF00C064E4 /* VerPostTableViewCell.swift in Sources */,
 				A9BF18872849198A00042969 /* SearchPostTableViewCell.swift in Sources */,
 				A94195EC27EB923D0006E2CD /* RegisterController.swift in Sources */,
 				A93E2B1628185BF600A20CA4 /* TabBarController.swift in Sources */,

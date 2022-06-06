@@ -9,7 +9,6 @@ import UIKit
 
 class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
-    var myDictionary: [String: Any] = [:]
     @IBAction func atrasBT(_ sender: Any) {dismiss(animated: true, completion: nil)}
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passTF: UITextField!
@@ -62,6 +61,7 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePicke
         view.addGestureRecognizer(tap)
     }
     
+    var myDictionary: [String: Any] = [:]
     func peticionEditarPerfil(id: Int)
     {
         let imgString = editarIMG.image?.pngData()?.base64EncodedString()
@@ -70,9 +70,8 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePicke
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "PUT" //EDITAR
         request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let bodyData = "password=\(passTF.text!)&nick=\(userTF.text!)&descripcion=\(descripcionTF.text!)&foto_url=\(String(describing: imgString))"  // NO ESTOY SEGURO DEL .text!
+        let bodyData = "password=\(passTF.text!)&nick=\(userTF.text!)&descripcion=\(descripcionTF.text!)&foto_url=\(String(describing: imgString))"  // NO ESTOY SEGURO DEL .text! pero creo que esta bien
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
-        
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response

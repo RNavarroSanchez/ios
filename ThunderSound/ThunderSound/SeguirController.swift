@@ -18,7 +18,7 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
     @IBOutlet var postsCV: UICollectionView!
     @IBAction func followBTf(_ sender: Any)
     {
-        peicionSeguir()
+        peticionSeguir()
     }
 
     override func viewDidLoad()
@@ -88,17 +88,7 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
         }.resume()
     }
     
-    func rellenarDatos()
-    {
-        userNameLBf.text = (self.datos1["nick"] as! String)
-        profileIVf.image = UIImage(data: self.datos1["foto_url"] as! Data)
-        followersLBf.text = (self.datos1["numeroseguidores"] as! String)
-        followLBf.text = (self.datos1["numeroseguidos"] as! String)
-        postLBf.text = (self.datos1["numeroposts"] as! String)
-        descriptionLBf.text = (self.datos1["descripcion"] as! String)
-    }
-
-    func peicionSeguir()
+    func peticionSeguir()
     {
         let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/siguiendo"
         guard let url = URL(string: urlString) else { return }
@@ -136,5 +126,15 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
                 }
             } catch let jsonError { print(jsonError) }
         }.resume()
+    }
+    
+    func rellenarDatos()
+    {
+        userNameLBf.text = (self.datos1["nick"] as! String)
+        profileIVf.image = UIImage(data: self.datos1["foto_url"] as! Data)
+        followersLBf.text = (self.datos1["numeroseguidores"] as! String)
+        followLBf.text = (self.datos1["numeroseguidos"] as! String)
+        postLBf.text = (self.datos1["numeroposts"] as! String)
+        descriptionLBf.text = (self.datos1["descripcion"] as! String)
     }
 }

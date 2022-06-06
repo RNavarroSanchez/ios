@@ -58,7 +58,6 @@ class RememberController: UIViewController
                     DispatchQueue.main.async
                     { [self] in
                         self.myResponse = json as! [String: Any]
-                        print(json)
                         if self.myResponse["error"] as? String != nil
                         {
                             let alert = UIAlertController(title: "Error", message: myResponse["message"] as? String, preferredStyle: .alert)

@@ -78,8 +78,7 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
                     self.myNotif = json as! [String: Any]
                     if self.myNotif["error"] as? String == nil
                     {
-                        let dataG = self.myNotif["data"] as! [String: Any]//Unexpectedly found nil while unwrapping an Optional value
-                        
+                        let dataG = self.myNotif["data"] as! [String: Any]
                         self.notificaciones = dataG["data"] as! [[String : Any]]
                         DispatchQueue.main.async
                         {

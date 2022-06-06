@@ -16,14 +16,5 @@ class InicioCollectionViewCell: UICollectionViewCell
     @IBOutlet var dateLB: UILabel!
     @IBOutlet var phraseLB: UILabel!
     @IBOutlet var comentariosTotalesBT: UIButton!
-    @IBOutlet var comentariosView: UIView!
-    @IBOutlet var miComentarioIV: UIImageView!
-    @IBOutlet var miComentarioNewTF: UITextField!
-    @IBOutlet var enviarMiComentarioBT: UIButton!
     @IBOutlet var InicioWebView: WKWebView!
-    
-    func girarimagen(_ sender: Any)
-    {
-        enviarMiComentarioBT.transform = enviarMiComentarioBT.transform.rotated(by: CGFloat(Double.pi / 6))
-    }
 }

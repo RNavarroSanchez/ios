@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  VerPostTableViewCell.swift
 //  ThunderSound
 //
 //  Created by Juanjo
@@ -7,24 +7,20 @@
 
 import UIKit
 
-class InicioTableViewCell: UITableViewCell
+class VerPostTableViewCell: UITableViewCell
 {
-    @IBOutlet var comentarioIV: UIImageView!
-    @IBOutlet var userNameComentLB: UILabel!
-    @IBOutlet var comentarioNewTF: UITextField!
-    @IBOutlet var dateNewComentLB: UILabel!
+    @IBOutlet var userIV: UIImageView!
+    @IBOutlet var nickLB: UILabel!
+    @IBOutlet var comentarioLB: UILabel!
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool)
     {
         super.setSelected(selected, animated: animated)
-
-        
     }
 
 }
