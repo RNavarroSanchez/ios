@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XEx-9N-ExH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -844,20 +843,27 @@
                                                     <rect key="frame" x="0.0" y="14" width="335" height="101"/>
                                                     <color key="backgroundColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto de la notificacionTexto de la notificacion" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8t-3Y-9Ul">
-                                                    <rect key="frame" x="50" y="35" width="191" height="58"/>
-                                                    <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8t-3Y-9Ul">
+                                                    <rect key="frame" x="41" y="35" width="212" height="58"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Texto de la notificacionTexto de la notificacion">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="13" name="PTSans-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="arJ-7g-1dO">
-                                                    <rect key="frame" x="255" y="28" width="72" height="75"/>
+                                                    <rect key="frame" x="255" y="28" width="80" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="72" id="1hx-uU-DSB"/>
+                                                        <constraint firstAttribute="width" constant="80" id="1hx-uU-DSB"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RU8-mP-6Kj">
-                                                    <rect key="frame" x="12" y="42" width="30" height="43"/>
+                                                    <rect key="frame" x="3" y="42" width="30" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="QbF-Vw-UwU"/>
                                                         <constraint firstAttribute="height" constant="43" id="VDe-vM-JWV"/>
@@ -865,18 +871,18 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="arJ-7g-1dO" firstAttribute="leading" secondItem="f8t-3Y-9Ul" secondAttribute="trailing" constant="14" id="8O4-WO-BZj"/>
+                                                <constraint firstItem="arJ-7g-1dO" firstAttribute="leading" secondItem="f8t-3Y-9Ul" secondAttribute="trailing" constant="2" id="8O4-WO-BZj"/>
                                                 <constraint firstItem="f8t-3Y-9Ul" firstAttribute="leading" secondItem="RU8-mP-6Kj" secondAttribute="trailing" constant="8" symbolic="YES" id="QEW-3j-t6B"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="f8t-3Y-9Ul" secondAttribute="bottom" constant="25" id="VQA-5p-t9q"/>
                                                 <constraint firstAttribute="trailing" secondItem="qQ9-cU-AY7" secondAttribute="trailing" id="Vsg-HC-5rF"/>
-                                                <constraint firstItem="RU8-mP-6Kj" firstAttribute="leading" secondItem="FE9-s5-ukq" secondAttribute="leading" constant="12" id="VuA-po-sdA"/>
+                                                <constraint firstItem="RU8-mP-6Kj" firstAttribute="leading" secondItem="FE9-s5-ukq" secondAttribute="leading" constant="3" id="VuA-po-sdA"/>
                                                 <constraint firstAttribute="bottom" secondItem="RU8-mP-6Kj" secondAttribute="bottom" constant="44" id="W6e-9q-Rfw"/>
                                                 <constraint firstItem="qQ9-cU-AY7" firstAttribute="leading" secondItem="FE9-s5-ukq" secondAttribute="leading" id="ZKk-dc-159"/>
-                                                <constraint firstAttribute="bottom" secondItem="arJ-7g-1dO" secondAttribute="bottom" constant="26" id="dDt-fM-4m8"/>
+                                                <constraint firstAttribute="bottom" secondItem="arJ-7g-1dO" secondAttribute="bottom" constant="21" id="dDt-fM-4m8"/>
                                                 <constraint firstItem="arJ-7g-1dO" firstAttribute="top" secondItem="FE9-s5-ukq" secondAttribute="top" constant="28" id="gA4-bB-DcF"/>
                                                 <constraint firstItem="qQ9-cU-AY7" firstAttribute="top" secondItem="FE9-s5-ukq" secondAttribute="top" constant="14" id="nLW-xt-41Z"/>
                                                 <constraint firstAttribute="bottom" secondItem="qQ9-cU-AY7" secondAttribute="bottom" constant="14" id="quU-8h-Odw"/>
-                                                <constraint firstAttribute="trailing" secondItem="arJ-7g-1dO" secondAttribute="trailing" constant="8" id="rR6-kw-E6L"/>
+                                                <constraint firstAttribute="trailing" secondItem="arJ-7g-1dO" secondAttribute="trailing" id="rR6-kw-E6L"/>
                                                 <constraint firstItem="f8t-3Y-9Ul" firstAttribute="top" secondItem="FE9-s5-ukq" secondAttribute="topMargin" constant="24" id="wUu-yF-Liw"/>
                                                 <constraint firstItem="RU8-mP-6Kj" firstAttribute="top" secondItem="FE9-s5-ukq" secondAttribute="top" constant="42" id="yhx-SQ-cMJ"/>
                                             </constraints>
@@ -1302,11 +1308,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-XT-AqL">
                                         <rect key="frame" x="21" y="55" width="290" height="182"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe algo..." adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IjX-to-EL3">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" usesAttributedText="YES" placeholder="Escribe algo..." adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IjX-to-EL3">
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="92"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">hola ni nombre es juan y esta es mi cancion preferida. hola ni nombre es juan y esta es mi cancion preferida. hola ni nombre es juan y esta es mi cancion preferida.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">Hola ni nombre es juan y esta es mi cancion preferida. hola ni nombre es juan y esta es mi cancion preferida. hola ni nombre es juan y esta es mi cancion preferida.</string>
+                                                        <attributes>
+                                                            <color key="NSColor" systemColor="labelColor"/>
+                                                            <font key="NSFont" metaFont="cellTitle"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9N-V7-NnP">
@@ -1499,7 +1513,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="postsCell" id="K5v-Eg-Efe" customClass="PerfilCollectionViewCell" customModule="ThunderSound" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="postsCell" reuseIdentifier="postsCell" id="K5v-Eg-Efe" customClass="PerfilCollectionViewCell" customModule="ThunderSound" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="156"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mrR-WU-tQ9">
@@ -1936,7 +1950,7 @@
         <!--Ver Post-->
         <scene sceneID="4U7-jZ-Qqb">
             <objects>
-                <viewController storyboardIdentifier="VerPostid" title="Ver Post" modalPresentationStyle="fullScreen" id="Zsw-zC-edM" customClass="VerPostController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerPostid" title="Ver Post" modalPresentationStyle="fullScreen" id="Zsw-zC-edM" customClass="VerPostViewController" customModule="ThunderSound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0j-zp-Kqs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2214,6 +2228,9 @@
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

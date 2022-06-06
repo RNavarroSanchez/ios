@@ -56,7 +56,9 @@ class AlertController: UIViewController
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "POST"
         request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let bodyData = "texto=\(comentarioTF)&usuario_id=\(shared.string(forKey: "id"))&spotify_id=\(<#Any.Type#>)"
+        request.setValue("Bearer \(shared.string(forKey: "token")!)", forHTTPHeaderField: "Authorization")
+        let bodyData = "texto=\(comentarioTF.text!)&usuario_id=\(shared.string(forKey: "id")!)&spotify_id=\(shared.string(forKey: "songid")!)"
+        print(bodyData)
         request.httpBody = bodyData.data(using: String.Encoding.utf8);
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
