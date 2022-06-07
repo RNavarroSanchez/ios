@@ -58,7 +58,6 @@ class NotificacionesController: UIViewController, UITableViewDelegate, UITableVi
     func peticionGetNotif(id: Int)
     {
         let shared = UserDefaults.standard
-        let id = shared.integer(forKey: "id")
         let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)/notificaciones")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)

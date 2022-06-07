@@ -38,9 +38,9 @@ class LoginController: UIViewController
     {
         super.viewDidLoad()
         let shared = UserDefaults.standard
-        shared.setValue("", forKey: "userTF")
-        shared.setValue("", forKey: "passwordTF")
-        shared.setValue("", forKey: "token")
+//        shared.setValue("", forKey: "userTF")
+//        shared.setValue("", forKey: "passwordTF")
+//        shared.setValue("", forKey: "token")
         if let user = shared.string(forKey: "userTF")
         {
             if let pass = shared.string(forKey: "passwordTF")

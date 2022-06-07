@@ -10,13 +10,17 @@ import UIKit
 class InicioController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
     @IBOutlet var inicioCollectionView: UICollectionView!
-    
+               
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        inicioCollectionView.delegate = self
+        inicioCollectionView.dataSource = self
+        let shared = UserDefaults.standard
+        peticionPerfil(id: shared.integer(forKey: "id"))
     }
     
-    var posts: [String: Any] = [:]
+    var posts: [[String: Any]] = []
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         posts.count
@@ -24,23 +28,35 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postsCell", for: indexPath) as! PerfilCollectionViewCell
-        let url = NSURL(string: posts["url_portada"] as! String)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inicioCell", for: indexPath) as! InicioCollectionViewCell
+        let url = NSURL(string: posts[indexPath.row]["foto_url"] as! String)
         let data = NSData(contentsOf: url! as URL)
         if data != nil
         {
-            cell.postIMG.image = UIImage(data: data! as Data)
+            cell.perfilIV.image = UIImage(data: data! as Data)
         }
-        cell.postNameLB.text = (posts["titulo"] as! String)
+        cell.userNameLB.text = (posts[indexPath.row]["nick"] as! String)
+        cell.phraseLB.text = (posts[indexPath.row]["texto"] as! String)
+        let numComent = (posts[indexPath.row]["nunmero_comentarios"])!
+        cell.comentariosTotalesBT.setTitle("\(numComent)", for: .normal)
+        let dataC = (posts[indexPath.row ]["cancion"] as! [String : Any])
+        let songID = dataC["spotify_id"] as! String
+        
+        cell.InicioWebView.loadHTMLString("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body><iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/\(songID)?utm_source=generator\" width=\"100%\" height=\"90%\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe></body></html>", baseURL: nil)
         return cell
     }
     
     var datos1: [String: Any] = [:]
     func peticionPerfil(id: Int)
     {
-        let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuario/\(id)/siguiendo"
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let shared = UserDefaults.standard
+        let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/1/siguiendo"
+        guard let serviceUrl = URL(string: urlString) else { return }
+        var request = URLRequest(url: serviceUrl)
+        let token = (shared.string(forKey: "token")!)
+        print(token)
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil
             {
                 print(error!.localizedDescription)
@@ -56,14 +72,12 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
                 self.datos1 = json
                 if self.datos1["error"] as? String == nil
                 {
+                    print(self.datos1)
                     let dataG = self.datos1["data"] as! [String: Any]
-                    self.posts = dataG["data"] as! [String : Any]
-                    //puede que haya un tercero pero no estoy seguro
-                    
-//                    self.posts = self.datos1["data"] as! [String : Any]//Could not cast value of type '__NSDictionaryI' (0x101d10660) to 'NSArray' (0x101d106c0).
+                    self.posts = dataG["data"] as! [[String : Any]]
+
                     DispatchQueue.main.async
                     {
-//                        self.rellenarDatos()
                         self.inicioCollectionView.reloadData()
                     }
                 } else
@@ -77,13 +91,4 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
         }.resume()
     }
     
-//    func rellenarDatos()
-//    {
-//        userNameLBp.text = (self.datos1["nick"] as! String)
-//        myProfileIVp.image = UIImage(data: self.datos1["foto_url"] as! Data)
-//        followersLBp.text = (self.datos1["numeroseguidores"] as! String)
-//        followLBp.text = (self.datos1["numeroseguidos"] as! String)
-//        postLBp.text = (self.datos1["numeroposts"] as! String)
-//        descriptionLBp.text = (self.datos1["descripcion"] as! String)
-//    }
 }
