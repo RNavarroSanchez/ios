@@ -85,7 +85,7 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
 //                    let dataG = self.datos1["data"] as! [String: Any]
 //                    self.posts = dataG["data"] as! [[String : Any]]
                     
-                    self.posts = self.datos1["data"] as! [String : Any]//Could not cast value of type '__NSDictionaryI' (0x101d10660) to 'NSArray' (0x101d106c0).
+                    self.posts = self.datos1["data"] as! [String : Any] // Fatal error: Unexpectedly found nil while unwrapping an Optional value
                     DispatchQueue.main.async
                     {
                         self.rellenarDatos()

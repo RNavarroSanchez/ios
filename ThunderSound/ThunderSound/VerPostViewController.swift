@@ -42,6 +42,11 @@ class VerPostViewController: UIViewController, UITableViewDataSource, UITableVie
                                        , baseURL: nil)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 125
+    }
+    
     var posts: [[String: Any]] = []
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
