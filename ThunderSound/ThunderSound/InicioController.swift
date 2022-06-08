@@ -18,7 +18,6 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
         inicioCollectionView.dataSource = self
         let shared = UserDefaults.standard
         peticionPerfil(id: shared.integer(forKey: "id"))
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize

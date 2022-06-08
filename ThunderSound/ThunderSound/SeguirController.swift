@@ -19,13 +19,17 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
     @IBOutlet var postsCV: UICollectionView!
     @IBAction func followBTf(_ sender: Any)
     {
-        let shared = UserDefaults.standard
 //        peticionSeguir()
     }
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        postsCV.delegate = self
+        postsCV.dataSource = self
+        let shared = UserDefaults.standard
+        let id = shared.integer(forKey: "id")
+        peticionPerfil(id: id)
     }
     
     var posts: [[String: Any]] = []
@@ -36,14 +40,15 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "perfilCell", for: indexPath) as! SeguirCollectionViewCell
-        let url = NSURL(string: posts[indexPath.row]["url_portada"] as! String)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "perfilCell", for: indexPath) as! PerfilCollectionViewCell
+        let cancion: [String : Any] = posts[indexPath.row]["cancion"] as! [String : Any]
+        let url = NSURL(string: cancion["url_portada"] as! String)
         let data = NSData(contentsOf: url! as URL)
         if data != nil
         {
             cell.postIMG.image = UIImage(data: data! as Data)
         }
-        cell.postNameLB.text = (posts[indexPath.row]["titulo"] as! String)
+        cell.postNameLB.text = (cancion["titulo"] as! String)
         return cell
     }
     
@@ -54,10 +59,10 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
         let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)/canciones"
         guard let serviceUrl = URL(string: urlString) else { return }
         var request = URLRequest(url: serviceUrl)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
         let token = (shared.string(forKey: "token")!)
         print(token)
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil
             {
                 print(error!.localizedDescription)
@@ -71,7 +76,7 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
             {
                 let json = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as! [String:Any]
                 self.datos1 = json
-                
+                print(json)
                 if self.datos1["error"] as? String == nil
                 {
                     let dataG = self.datos1["data"] as! [String: Any]
@@ -109,13 +114,15 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
     
 //    func peticionSeguir()
 //    {
+//        let dataG = self.datos1["data"] as! [String: Any]
+//
 //        let shared = UserDefaults.standard
 //        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/siguiendo")
 //        guard let serviceUrl = URL(string: Url) else { return }
 //        var request = URLRequest(url: serviceUrl)
 //        request.httpMethod = "POST"
 //        request.setValue("Application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-//        let bodyData = "emisor_id=\(emisor_id)&receptor_id=\(receptor_id)"
+//        let bodyData = "emisor_id=\(shared.integer(forKey: "id"))&receptor_id=\(dataG["id"])"
 //        request.httpBody = bodyData.data(using: String.Encoding.utf8);
 //        let session = URLSession.shared
 //        session.dataTask(with: request) { (data, response, error) in
@@ -131,8 +138,9 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
 //                        print(json)
 //                        if self.posts["error"] != nil
 //                        {
+//                            //esto seria para ir a la pantalla de que ahora si le sigo
 //                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                            let vc = storyboard.instantiateViewController(withIdentifier: "Inicioid") as! InicioController
+//                            let vc = storyboard.instantiateViewController(withIdentifier: "SeguirProfileYES") as! SeguirControllerYES
 //                            vc.modalPresentationStyle = .fullScreen
 //                            self.present(vc, animated: true, completion: nil)
 //                        }
@@ -143,6 +151,5 @@ class SeguirController: UIViewController, UICollectionViewDelegate, UICollection
 //                }
 //            }
 //        }.resume()
-//    }
 //    }
 }

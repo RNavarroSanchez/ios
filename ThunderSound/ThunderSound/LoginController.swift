@@ -110,9 +110,11 @@ class LoginController: UIViewController
                             let shared = UserDefaults.standard
                             shared.setValue(userTF, forKey: "userTF")
                             shared.setValue(passwordTF, forKey: "passwordTF")
-                            shared.setValue(myResponse["access_token"] as! String, forKey: "token")
                             let id = self.myResponse["id"]
+                            let token = self.myResponse["access_token"] as! String
+                            shared.setValue(token, forKey: "token")
                             shared.setValue(id, forKey: "id")
+                            print(token)
                             let emisor_id = shared.integer(forKey: "id")
                         }
                     }
