@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Btn-center.png",
+      "filename" : "BotonPost.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Btn-center@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Btn-center@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

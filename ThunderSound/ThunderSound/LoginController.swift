@@ -13,6 +13,10 @@ class LoginController: UIViewController
     @IBOutlet var userTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var rememberLB: UILabel!
+    @IBAction func showPass(_ sender: Any)
+    {
+        passwordTF.isSecureTextEntry = !passwordTF.isSecureTextEntry
+    }
     @IBAction func registerBT(_ sender: Any)
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -38,9 +42,9 @@ class LoginController: UIViewController
     {
         super.viewDidLoad()
         let shared = UserDefaults.standard
-//        shared.setValue("", forKey: "userTF")
-//        shared.setValue("", forKey: "passwordTF")
-//        shared.setValue("", forKey: "token")
+        shared.setValue("", forKey: "userTF")
+        shared.setValue("", forKey: "passwordTF")
+        shared.setValue("", forKey: "token")
         if let user = shared.string(forKey: "userTF")
         {
             if let pass = shared.string(forKey: "passwordTF")

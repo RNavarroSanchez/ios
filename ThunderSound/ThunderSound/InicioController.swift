@@ -18,6 +18,7 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
         inicioCollectionView.dataSource = self
         let shared = UserDefaults.standard
         peticionPerfil(id: shared.integer(forKey: "id"))
+        
     }
     
     var posts: [[String: Any]] = []
@@ -41,8 +42,11 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
         cell.comentariosTotalesBT.setTitle("\(numComent)", for: .normal)
         let dataC = (posts[indexPath.row ]["cancion"] as! [String : Any])
         let songID = dataC["spotify_id"] as! String
-        
-        cell.InicioWebView.loadHTMLString("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body><iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/\(songID)?utm_source=generator\" width=\"100%\" height=\"90%\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe></body></html>", baseURL: nil)
+        cell.InicioWebView.loadHTMLString("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body style = \"background-color:#FC9025\"><iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/\(songID)?utm_source=generator\" width=\"100%\" height=\"100%\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe></body></html>", baseURL: nil)
+        cell.todoView.layer.cornerRadius = 15
+        cell.todoView.clipsToBounds = true
+        cell.perfilIV.layer.cornerRadius = 20
+        cell.perfilIV.clipsToBounds = true
         return cell
     }
     
@@ -90,5 +94,4 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
             } catch let jsonError { print(jsonError) }
         }.resume()
     }
-    
 }
