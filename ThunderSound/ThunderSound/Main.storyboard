@@ -735,6 +735,9 @@
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="21"/>
+                                                    <connections>
+                                                        <segue destination="Zsw-zC-edM" kind="presentation" modalPresentationStyle="fullScreen" id="xvg-GJ-icR"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.56470588235294117" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2023,6 +2026,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmB-hz-Lsc">
                                 <rect key="frame" x="297" y="348.33333333333331" width="62" height="31"/>
+                                <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="21"/>
                             </button>
@@ -2232,8 +2236,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="281"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nombre usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49j-3S-Alz">
-                                                    <rect key="frame" x="76" y="29" width="205" height="26"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49j-3S-Alz">
+                                                    <rect key="frame" x="152.66666666666666" y="40" width="204.99999999999997" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="205" id="25M-22-ijv"/>
                                                     </constraints>
@@ -2241,14 +2245,14 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Esta es la canción que ultimamente tengo siempre en bucle" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPw-dd-1Ia">
-                                                    <rect key="frame" x="64" y="73" width="228" height="39"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta es la canción que ultimamente tengo siempre en bucle" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPw-dd-1Ia">
+                                                    <rect key="frame" x="64" y="73" width="382.33333333333331" height="19.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LogoThunderSound" translatesAutoresizingMaskIntoConstraints="NO" id="83A-PI-OTp">
-                                                    <rect key="frame" x="20" y="22" width="40" height="40"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoThunderSound" translatesAutoresizingMaskIntoConstraints="NO" id="83A-PI-OTp">
+                                                    <rect key="frame" x="103.66666666666667" y="22" width="40.000000000000014" height="40"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="ODx-mM-fiA"/>
@@ -2256,7 +2260,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-ub-fdy">
-                                                    <rect key="frame" x="20" y="126" width="303" height="99"/>
+                                                    <rect key="frame" x="20" y="106.66666666666669" width="303" height="99"/>
                                                     <subviews>
                                                         <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2GN-R1-GH6">
                                                             <rect key="frame" x="4" y="0.0" width="295" height="99"/>
@@ -2278,9 +2282,8 @@
                                                         <constraint firstItem="2GN-R1-GH6" firstAttribute="leading" secondItem="vbu-ub-fdy" secondAttribute="leading" id="nOT-Ct-i60"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18c-Ne-blX">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18c-Ne-blX">
                                                     <rect key="frame" x="274" y="240" width="62" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title="21"/>
@@ -2288,8 +2291,16 @@
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.56470588239999997" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="vbu-ub-fdy" firstAttribute="centerX" secondItem="Pb3-qy-hDt" secondAttribute="centerX" id="1WG-JF-dJ7"/>
+                                                <constraint firstItem="iPw-dd-1Ia" firstAttribute="leading" secondItem="Pb3-qy-hDt" secondAttribute="leadingMargin" constant="48" id="3V5-v5-7VC"/>
                                                 <constraint firstItem="49j-3S-Alz" firstAttribute="leading" secondItem="83A-PI-OTp" secondAttribute="trailing" constant="9" id="AS2-MA-tEZ"/>
+                                                <constraint firstItem="iPw-dd-1Ia" firstAttribute="centerX" secondItem="49j-3S-Alz" secondAttribute="centerX" id="NHw-PX-g3U"/>
+                                                <constraint firstItem="18c-Ne-blX" firstAttribute="top" secondItem="vbu-ub-fdy" secondAttribute="bottom" constant="34.333333333333314" id="Nvw-Cl-TN1"/>
+                                                <constraint firstItem="iPw-dd-1Ia" firstAttribute="top" secondItem="Pb3-qy-hDt" secondAttribute="top" constant="73" id="SE1-d4-7b0"/>
+                                                <constraint firstItem="vbu-ub-fdy" firstAttribute="top" secondItem="iPw-dd-1Ia" secondAttribute="bottom" constant="14" id="Z1o-m1-H1C"/>
                                                 <constraint firstItem="iPw-dd-1Ia" firstAttribute="top" secondItem="49j-3S-Alz" secondAttribute="bottom" constant="7" id="dbV-Qh-iyx"/>
+                                                <constraint firstItem="iPw-dd-1Ia" firstAttribute="top" secondItem="83A-PI-OTp" secondAttribute="bottom" constant="11" id="fxG-mb-Apc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="18c-Ne-blX" secondAttribute="trailing" constant="-9" id="ip0-1B-giC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -2318,6 +2329,7 @@
                             <constraint firstItem="tRH-hk-1c2" firstAttribute="trailing" secondItem="r2h-hq-MUR" secondAttribute="trailing" id="q89-4Y-EMg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5O0-Hy-nFa"/>
                     <connections>
                         <outlet property="inicioTableView" destination="EEr-9x-f1i" id="W6F-0q-288"/>
                     </connections>

@@ -16,18 +16,15 @@ class VerPostViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     @IBOutlet var userPostIMG: UIImageView!
     @IBOutlet var nickLB: UILabel!
-    @IBOutlet var horaCreacionLB: UILabel!
     @IBOutlet var textoLB: UILabel!
     @IBOutlet var spotifyWebView: WKWebView!
     @IBOutlet var comentariosTotalLB: UIButton!
     @IBOutlet var comentariosTV: UITableView!
-    @IBOutlet var myUserIMG: UIImageView!
     @IBOutlet var comentarioTF: UITextField!
     @IBAction func enviarComentarioBT(_ sender: Any)
     {
         peticionAddComentario(comentarioTF: comentarioTF.text!)
     }
-    
     
     override func viewDidLoad()
     {
@@ -70,7 +67,9 @@ class VerPostViewController: UIViewController, UITableViewDataSource, UITableVie
     var myComents: [String: Any] = [:]
     func peticionAddComentario(comentarioTF: String)
     {
-        let Url = String(format: "")
+        let shared = UserDefaults.standard
+        let id = shared.integer(forKey: "id")
+        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/posts/\(id)/comentarios")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "POST"
