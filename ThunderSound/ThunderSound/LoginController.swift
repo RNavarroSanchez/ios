@@ -42,9 +42,9 @@ class LoginController: UIViewController
     {
         super.viewDidLoad()
         let shared = UserDefaults.standard
-        shared.setValue("", forKey: "userTF")
-        shared.setValue("", forKey: "passwordTF")
-        shared.setValue("", forKey: "token")
+//        shared.setValue("", forKey: "userTF")
+//        shared.setValue("", forKey: "passwordTF")
+//        shared.setValue("", forKey: "token")
         if let user = shared.string(forKey: "userTF")
         {
             if let pass = shared.string(forKey: "passwordTF")
@@ -113,6 +113,7 @@ class LoginController: UIViewController
                             shared.setValue(myResponse["access_token"] as! String, forKey: "token")
                             let id = self.myResponse["id"]
                             shared.setValue(id, forKey: "id")
+                            let emisor_id = shared.integer(forKey: "id")
                         }
                     }
                 } catch

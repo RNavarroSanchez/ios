@@ -65,7 +65,7 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UIImagePicke
     func peticionEditarPerfil(id: Int)
     {
         let imgString = editarIMG.image?.pngData()?.base64EncodedString()
-        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)/canciones")
+        let Url = String(format: "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)")
         guard let serviceUrl = URL(string: Url) else { return }
         var request = URLRequest(url: serviceUrl)
         request.httpMethod = "PUT" //EDITAR

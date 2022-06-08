@@ -67,6 +67,7 @@ class SearchController: UIViewController, UITableViewDelegate, UITableViewDataSo
         let id = (usuarios[indexPath.row]["id"] as! Int)
         let shared = UserDefaults.standard
         shared.setValue(id, forKey: "id")
+        let receptor_id = shared.integer(forKey: "id")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "suPerfilid") as! SeguirController
         vc.modalPresentationStyle = .fullScreen

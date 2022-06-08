@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InicioController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
+class InicioController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet var inicioCollectionView: UICollectionView!
                
@@ -19,6 +19,14 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
         let shared = UserDefaults.standard
         peticionPerfil(id: shared.integer(forKey: "id"))
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let ancho : Int = Int(self.inicioCollectionView.frame.size.width)
+        let alto = 255
+        let tam = CGSize(width: ancho, height: alto)
+        return tam
     }
     
     var posts: [[String: Any]] = []
@@ -42,7 +50,8 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
         cell.comentariosTotalesBT.setTitle("\(numComent)", for: .normal)
         let dataC = (posts[indexPath.row ]["cancion"] as! [String : Any])
         let songID = dataC["spotify_id"] as! String
-        cell.InicioWebView.loadHTMLString("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body style = \"background-color:#FC9025\"><iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/\(songID)?utm_source=generator\" width=\"100%\" height=\"100%\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe></body></html>", baseURL: nil)
+        cell.InicioWebView.loadHTMLString("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body style = \"background-color:#FC9025\"><iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/\(songID)?utm_source=generator\" width=\"100%\" height=\"90px\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe></body></html>", baseURL: nil)
+        cell.InicioWebView.scrollView.isScrollEnabled = false
         cell.todoView.layer.cornerRadius = 15
         cell.todoView.clipsToBounds = true
         cell.perfilIV.layer.cornerRadius = 20
@@ -54,7 +63,8 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
     func peticionPerfil(id: Int)
     {
         let shared = UserDefaults.standard
-        let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/1/siguiendo"
+        let id = shared.integer(forKey: "id")
+        let urlString = "http://35.181.160.138/proyectos/thunder22/public/api/usuarios/\(id)/siguiendo"
         guard let serviceUrl = URL(string: urlString) else { return }
         var request = URLRequest(url: serviceUrl)
         let token = (shared.string(forKey: "token")!)
@@ -78,8 +88,16 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
                 {
                     print(self.datos1)
                     let dataG = self.datos1["data"] as! [String: Any]
-                    self.posts = dataG["data"] as! [[String : Any]]
-
+                    if dataG["Error"] as? String == nil
+                    {
+                        self.posts = dataG["data"] as! [[String : Any]]
+                    } else
+                    {
+                        let alert = UIAlertController(title: "No sigue a ningun usuario.", message: self.datos1["message"] as? String, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
+                        alert.addAction(action)
+                        self.present(alert, animated: true)
+                    }
                     DispatchQueue.main.async
                     {
                         self.inicioCollectionView.reloadData()
@@ -90,6 +108,11 @@ class InicioController: UIViewController, UICollectionViewDelegate, UICollection
                     let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
                     alert.addAction(action)
                     self.present(alert, animated: true)
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "SearchUserid") as! SearchController
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
                 }
             } catch let jsonError { print(jsonError) }
         }.resume()

@@ -30,8 +30,6 @@
 		A95364E428450EA30067BA78 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95364E328450EA30067BA78 /* EditProfileController.swift */; };
 		A95364E628451DDB0067BA78 /* PerfilCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95364E528451DDB0067BA78 /* PerfilCollectionViewCell.swift */; };
 		A9557ED427FB521C000D061C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9557ED327FB521B000D061C /* AlertController.swift */; };
-		A9570A932850F0B400354570 /* InicioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9570A922850F0B400354570 /* InicioTableViewCell.swift */; };
-		A9570A952850F0DE00354570 /* Inicio1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9570A942850F0DE00354570 /* Inicio1ViewController.swift */; };
 		A9570A982850F5B900354570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9570A972850F5B900354570 /* Main.storyboard */; };
 		A95C3631284E69AF00C064E4 /* VerPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3630284E69AF00C064E4 /* VerPostTableViewCell.swift */; };
 		A96C236127E252BB00CE771A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C236027E252BB00CE771A /* Launch Screen.storyboard */; };
@@ -66,8 +64,6 @@
 		A95364E328450EA30067BA78 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		A95364E528451DDB0067BA78 /* PerfilCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9557ED327FB521B000D061C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		A9570A922850F0B400354570 /* InicioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioTableViewCell.swift; sourceTree = "<group>"; };
-		A9570A942850F0DE00354570 /* Inicio1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inicio1ViewController.swift; sourceTree = "<group>"; };
 		A9570A972850F5B900354570 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A95C3630284E69AF00C064E4 /* VerPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerPostTableViewCell.swift; sourceTree = "<group>"; };
 		A96C236027E252BB00CE771A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -126,8 +122,6 @@
 				A94195EB27EB923D0006E2CD /* RegisterController.swift */,
 				A9A0711C2819A04500F67230 /* InicioCollectionViewCell.swift */,
 				A93C5D2C281711830006E18C /* InicioController.swift */,
-				A9570A922850F0B400354570 /* InicioTableViewCell.swift */,
-				A9570A942850F0DE00354570 /* Inicio1ViewController.swift */,
 				A94E198A284A555D0084A797 /* VerPostViewController.swift */,
 				A95C3630284E69AF00C064E4 /* VerPostTableViewCell.swift */,
 				A94195EF27EB97C60006E2CD /* SearchController.swift */,
@@ -236,13 +230,11 @@
 				A9BF18872849198A00042969 /* SearchPostTableViewCell.swift in Sources */,
 				A94195EC27EB923D0006E2CD /* RegisterController.swift in Sources */,
 				A93E2B1628185BF600A20CA4 /* TabBarController.swift in Sources */,
-				A9570A932850F0B400354570 /* InicioTableViewCell.swift in Sources */,
 				A94195F027EB97C60006E2CD /* SearchController.swift in Sources */,
 				A94ABF0E281AE936000D3794 /* NavegationController.swift in Sources */,
 				A93C5D2D281711830006E18C /* InicioController.swift in Sources */,
 				A94DD394283E91A6007D45AA /* SearchTableViewCell.swift in Sources */,
 				A94ABF10281B03D3000D3794 /* RememberController.swift in Sources */,
-				A9570A952850F0DE00354570 /* Inicio1ViewController.swift in Sources */,
 				A94F47E12847BEDD00253647 /* SeguirCollectionViewCell.swift in Sources */,
 				A95364E428450EA30067BA78 /* EditProfileController.swift in Sources */,
 				A94195EA27EB92330006E2CD /* LoginController.swift in Sources */,
