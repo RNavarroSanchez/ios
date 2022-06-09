@@ -53,6 +53,15 @@ class PerfilController: UIViewController, UICollectionViewDelegate, UICollection
         posts.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "VerPostid") as! VerPostViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.post_id = posts[indexPath.row]["id"] as! Int
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postsCell", for: indexPath) as! PerfilCollectionViewCell
