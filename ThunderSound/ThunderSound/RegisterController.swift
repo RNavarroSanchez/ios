@@ -98,7 +98,7 @@ class RegisterController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                             self.present(vc, animated: true, completion: nil)
                         } else
                         {
-                            let alert = UIAlertController(title: "Error != 200", message: self.myDictionary["message"] as? String, preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Error de Registro", message: "Compruebe que: Nombre mínimo 3 caracteres, Apellidos minimo 5 caracteres, Correo no repetido, Nick no repetido, contraseña minimo 8 caracteres, foto obligatoria y descripción minimo 5 caracteres. Gracias.", preferredStyle: .alert)
                             let action = UIAlertAction(title: "Entendido", style: .default, handler: nil)
                             alert.addAction(action)
                             self.present(alert, animated: true)
